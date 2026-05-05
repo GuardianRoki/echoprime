@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>EchoPrime: Echo DB</title>
+        <link rel="stylesheet" href="echoprime.css">
+    </head>
+
+    <body>
+
+        <header>
+            <h1>EchoPrime</h1>
+            <h2>Wuthering Waves Echo/Build Optimizer</h2>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="characters.html">Characters</a></li>
+                <li><a href="calculator.html">Calculator</a></li>
+                <li><a href="echodb.html">Echo DB</a></li>
+                <li><a href="guide.html">Guide</a></li>
+                <li><a href="glossary.html">Glossary</a></li>
+            </ul>
+        </nav>
+
+        <div class="wrapper">
+
+            <main>
+
+            <section>
+                <h2>Echo Database</h2>
+                <p>A reference list of echoes organized by classification. Each entry shows the echo's cost tier, sonata set, and available main stats. Use the search box to filter by name.</p>
+                <form onsubmit="return false;" class="search-wrap">
+                    <label for="db-search">Search echoes:</label>
+                    <input type="text" id="db-search" class="calc-input-text" placeholder="Search echo name..." oninput="filterEchoes()">
+                </form>
+            </section>
+
+            <div id="echo-db-list">
+                <section class="region-section">
+                    <h2 class="region-title class-calamity">Calamity Class</h2>
+                    <p class="class-desc">Cost 4 echoes of the Calamity class.</p>
+                    <div class="echo-db-grid">
+                    <div class="echo-db-card">
+                        <img src="BellBorneGeochelone.webp" alt="Bell-Borne Geochelone" class="echo-db-icon">
+                        <p class="echo-db-name">Bell-Borne Geochelone</p>
+                        <p class="echo-db-set">Rejuvenating Glow / Moonlit Clouds</p>
+                        <p class="echo-db-main">Crit. Rate / Crit. DMG / ATK% / HP% / DEF% / Healing Bonus%</p>
+                    </div>
+                    <div class="echo-db-card">
+                        <img src="Dreamless.webp" alt="Dreamless" class="echo-db-icon">
+                        <p class="echo-db-name">Dreamless</p>
+                        <p class="echo-db-set">Havoc Eclipse</p>
+                        <p class="echo-db-main">Crit. Rate / Crit. DMG / ATK% / HP% / DEF% / Healing Bonus%</p>
+                    </div>
+                    <div class="echo-db-card">
+                        <img src="Jué.webp" alt="Jué" class="echo-db-icon">
+                        <p class="echo-db-name">Jué</p>
+                        <p class="echo-db-set">Celestial Light</p>
+                        <p class="echo-db-main">Crit. Rate / Crit. DMG / ATK% / HP% / DEF% / Healing Bonus%</p>
+                    </div>
+                    <div class="echo-db-card">
+                        <img src="Sigillum.webp" alt="Sigillum" class="echo-db-icon">
+                        <p class="echo-db-name">Sigillum</p>
+                        <p class="echo-db-set">Trailblazing Star</p>
+                        <p class="echo-db-main">Crit. Rate / Crit. DMG / ATK% / HP% / DEF% / Healing Bonus%</p>
+                    </div>
+                    <div class="echo-db-card">
+                        <img src="ReminiscenceFleurdelys.webp" alt="Reminiscence: Fleurdelys" class="echo-db-icon">
+                        <p class="echo-db-name">Reminiscence: Fleurdelys</p>
+                        <p class="echo-db-set">Windward Pilgrimage</p>
+                        <p class="echo-db-main">Crit. Rate / Crit. DMG / ATK% / HP% / DEF% / Healing Bonus%</p>
+                    </div>
+                    <div class="echo-db-card">
+                        <img src="Hecate.webp" alt="Hecate" class="echo-db-icon">
+                        <p class="echo-db-name">Hecate</p>
+                        <p class="echo-db-set">Various</p>
+                        <p class="echo-db-main">Crit. Rate / Crit. DMG / ATK% / HP% / DEF% / Healing Bonus%</p>
+                    </div>
+                    </div>
+                </section>
+
+                <section class="region-section">
+                    <h2 class="region-title class-overlord">Overlord Class</h2>
+                    <p class="class-desc">Cost 4 echoes of the Overlord class.</p>
+                    <div class="echo-db-grid">
+                    <div class="echo-db-card">
+                        <img src="Hyvatia.webp" alt="Hyvatia" class="echo-db-icon">
+                        <p class="echo-db-name">Hyvatia</p>
+                        <p class="echo-db-set">Pact of Neonlight Leap</p>
+                        <p class="echo-db-main">Crit. Rate / Crit. DMG / ATK% / HP% / DEF% / Healing Bonus%</p>
+                    </div>
+<div class="echo-db-card">
+                        <img src="InfernoRider.webp" alt="Inferno Rider" class="echo-db-icon">
+                        <p class="echo-db-name">Inferno Rider</p>
+                        <p class="echo-db-set">Molten Rift</p>
+                        <p class="echo-db-main">Crit. Rate / Crit. DMG / ATK% / HP% / DEF% / Healing Bonus%</p>
+                    </div>
+                    <div class="echo-db-card">
+                        <img src="FeilianBeringal.webp" alt="Feilian Beringal" class="echo-db-icon">
+                        <p class="echo-db-name">Feilian Beringal</p>
+                        <p class="echo-db-set">Sierra Gale</p>
+                        <p class="echo-db-main">Crit. Rate / Crit. DMG / ATK% / HP% / DEF% / Healing Bonus%</p>
+                    </div>
+                    <div class="echo-db-card">
+                        <img src="ThunderingMephis.webp" alt="Thundering Mephis" class="echo-db-icon">
+                        <p class="echo-db-name">Thundering Mephis</p>
+                        <p class="echo-db-set">Void Thunder</p>
+                        <p class="echo-db-main">Crit. Rate / Crit. DMG / ATK% / HP% / DEF% / Healing Bonus%</p>
+                    </div>
+                    <div class="echo-db-card">
+                        <img src="Crownless.webp" alt="Crownless" class="echo-db-icon">
+                        <p class="echo-db-name">Crownless</p>
+                        <p class="echo-db-set">Havoc Eclipse</p>
+                        <p class="echo-db-main">Crit. Rate / Crit. DMG / ATK% / HP% / DEF% / Healing Bonus%</p>
+                    </div>
+                    <div class="echo-db-card">
+                        <img src="FallacyOfNoReturn.webp" alt="Fallacy of No Return" class="echo-db-icon">
+                        <p class="echo-db-name">Fallacy of No Return</p>
+                        <p class="echo-db-set">Rejuvenating Glow</p>
+                        <p class="echo-db-main">Crit. Rate / Crit. DMG / ATK% / HP% / DEF% / Healing Bonus%</p>
+                    </div>
+                    <div class="echo-db-card">
+                        <img src="ImpermanenceHeron.webp" alt="Impermanence Heron" class="echo-db-icon">
+                        <p class="echo-db-name">Impermanence Heron</p>
+                        <p class="echo-db-set">Rejuvenating Glow / Moonlit Clouds</p>
+                        <p class="echo-db-main">Crit. Rate / Crit. DMG / ATK% / HP% / DEF% / Healing Bonus%</p>
+                    </div>
+                    <div class="echo-db-card">
+                        <img src="MourningAix.webp" alt="Mourning Aix" class="echo-db-icon">
+                        <p class="echo-db-name">Mourning Aix</p>
+                        <p class="echo-db-set">Celestial Light</p>
+                        <p class="echo-db-main">Crit. Rate / Crit. DMG / ATK% / HP% / DEF% / Healing Bonus%</p>
+                    </div>
+                    <div class="echo-db-card">
+                        <img src="NamelessExplorer.webp" alt="Nameless Explorer" class="echo-db-icon">
+                        <p class="echo-db-name">Nameless Explorer</p>
+                        <p class="echo-db-set">Sound of True Name</p>
+                        <p class="echo-db-main">Crit. Rate / Crit. DMG / ATK% / HP% / DEF% / Healing Bonus%</p>
+                    </div>
+                    <div class="echo-db-card">
+                        <img src="ReactorHusk.webp" alt="Reactor Husk" class="echo-db-icon">
+                        <p class="echo-db-name">Reactor Husk</p>
+                        <p class="echo-db-set">Halo of Starry Radiance</p>
+                        <p class="echo-db-main">Crit. Rate / Crit. DMG / ATK% / HP% / DEF% / Healing Bonus%</p>
+                    </div>
+                    <div class="echo-db-card">
+                        <img src="DragonOfDirge.webp" alt="Dragon of Dirge" class="echo-db-icon">
+                        <p class="echo-db-name">Dragon of Dirge</p>
+                        <p class="echo-db-set">Tidebreaking Courage</p>
+                        <p class="echo-db-main">Crit. Rate / Crit. DMG / ATK% / HP% / DEF% / Healing Bonus%</p>
+                    </div>
+                    <div class="echo-db-card">
+                        <img src="LionessOfGlory.webp" alt="Lioness of Glory" class="echo-db-icon">
+                        <p class="echo-db-name">Lioness of Glory</p>
+                        <p class="echo-db-set">Flaming Clawprint</p>
+                        <p class="echo-db-main">Crit. Rate / Crit. DMG / ATK% / HP% / DEF% / Healing Bonus%</p>
+                    </div>
+                    <div class="echo-db-card">
+                        <img src="LadyOfTheSea.webp" alt="Lady of the Sea" class="echo-db-icon">
+                        <p class="echo-db-name">Lady of the Sea</p>
+                        <p class="echo-db-set">Crown of Valor</p>
+                        <p class="echo-db-main">Crit. Rate / Crit. DMG / ATK% / HP% / DEF% / Healing Bonus%</p>
+                    </div>
+                    <div class="echo-db-card">
+                        <img src="TheFalseSovereign.webp" alt="The False Sovereign" class="echo-db-icon">
+                        <p class="echo-db-name">The False Sovereign</p>
+                        <p class="echo-db-set">Crown of Valor</p>
+                        <p class="echo-db-main">Crit. Rate / Crit. DMG / ATK% / HP% / DEF% / Healing Bonus%</p>
+                    </div>
+                    <div class="echo-db-card">
+                        <img src="ReminiscenceFenrico.webp" alt="Reminiscence: Fenrico" class="echo-db-icon">
+                        <p class="echo-db-name">Reminiscence: Fenrico</p>
+                        <p class="echo-db-set">Law of Harmony</p>
+                        <p class="echo-db-main">Crit. Rate / Crit. DMG / ATK% / HP% / DEF% / Healing Bonus%</p>
+                    </div>
+                    </div>
+                </section>
+
+                <section class="region-section">
+                    <h2 class="region-title class-elite">Elite Class</h2>
+                    <p class="class-desc">Cost 3 echoes of the Elite class.</p>
+                    <div class="echo-db-grid">
+                    <div class="echo-db-card">
+                        <img src="VioletFeatheredHeron.webp" alt="Violet-Feathered Heron" class="echo-db-icon">
+                        <p class="echo-db-name">Violet-Feathered Heron</p>
+                        <p class="echo-db-set">Various</p>
+                        <p class="echo-db-main">Elemental DMG Bonus / ATK% / HP% / DEF% / Energy Regen</p>
+                    </div>
+                    <div class="echo-db-card">
+                        <img src="Corrosaurus.webp" alt="Corrosaurus" class="echo-db-icon">
+                        <p class="echo-db-name">Corrosaurus</p>
+                        <p class="echo-db-set">Flamewing's Shadow</p>
+                        <p class="echo-db-main">Elemental DMG Bonus / ATK% / HP% / DEF% / Energy Regen</p>
+                    </div>
+                    <div class="echo-db-card">
+                        <img src="TwinNovaNebulousCannon.webp" alt="Twin Nova: Nebulous Cannon" class="echo-db-icon">
+                        <p class="echo-db-name">Twin Nova: Nebulous Cannon</p>
+                        <p class="echo-db-set">Various</p>
+                        <p class="echo-db-main">Elemental DMG Bonus / ATK% / HP% / DEF% / Energy Regen</p>
+                    </div>
+                    <div class="echo-db-card">
+                        <img src="CyanFeatheredHeron.webp" alt="Cyan-Feathered Heron" class="echo-db-icon">
+                        <p class="echo-db-name">Cyan-Feathered Heron</p>
+                        <p class="echo-db-set">Various</p>
+                        <p class="echo-db-main">Elemental DMG Bonus / ATK% / HP% / DEF% / Energy Regen</p>
+                    </div>
+                    <div class="echo-db-card">
+                        <img src="StonewallBracer.webp" alt="Stonewall Bracer" class="echo-db-icon">
+                        <p class="echo-db-name">Stonewall Bracer</p>
+                        <p class="echo-db-set">Various</p>
+                        <p class="echo-db-main">Elemental DMG Bonus / ATK% / HP% / DEF% / Energy Regen</p>
+                    </div>
+                    </div>
+                </section>
+
+                <section class="region-section">
+                    <h2 class="region-title class-common">Common Class</h2>
+                    <p class="class-desc">Cost 1 echoes of the Common class.</p>
+                    <div class="echo-db-grid">
+                    <div class="echo-db-card">
+                        <img src="IceglintDancer.webp" alt="Iceglint Dancer" class="echo-db-icon">
+                        <p class="echo-db-name">Iceglint Dancer</p>
+                        <p class="echo-db-set">Various</p>
+                        <p class="echo-db-main">ATK% / HP% / DEF%</p>
+                    </div>
+                    <div class="echo-db-card">
+                        <img src="ShadowStepper.webp" alt="Shadow Stepper" class="echo-db-icon">
+                        <p class="echo-db-name">Shadow Stepper</p>
+                        <p class="echo-db-set">Various</p>
+                        <p class="echo-db-main">ATK% / HP% / DEF%</p>
+                    </div>
+                    <div class="echo-db-card">
+                        <img src="Hoartoise.webp" alt="Hoartoise" class="echo-db-icon">
+                        <p class="echo-db-name">Hoartoise</p>
+                        <p class="echo-db-set">Various</p>
+                        <p class="echo-db-main">ATK% / HP% / DEF%</p>
+                    </div>
+                    <div class="echo-db-card">
+                        <img src="WhiffWhaff.webp" alt="Whiff Whaff" class="echo-db-icon">
+                        <p class="echo-db-name">Whiff Whaff</p>
+                        <p class="echo-db-set">Various</p>
+                        <p class="echo-db-main">ATK% / HP% / DEF%</p>
+                    </div>
+                    <div class="echo-db-card">
+                        <img src="Gulpuff.webp" alt="Gulpuff" class="echo-db-icon">
+                        <p class="echo-db-name">Gulpuff</p>
+                        <p class="echo-db-set">Various</p>
+                        <p class="echo-db-main">ATK% / HP% / DEF%</p>
+                    </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <div class="clear"></div>
+
+            </main>
+
+            <footer>
+                <p>EchoPrime is a fan made tool and is not affiliated with Kuro Games.</p>
+            </footer>
+
+        </div>
+
+        <script>
+
+            function filterEchoes() {
+                var query = document.getElementById("db-search").value.toLowerCase();
+                var cards = document.querySelectorAll(".echo-db-card");
+                cards.forEach(function(card) {
+                    var name = card.querySelector(".echo-db-name");
+                    if (name && name.textContent.toLowerCase().indexOf(query) !== -1) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            const navLinks = document.querySelectorAll('nav ul li a');
+            navLinks.forEach(function(link) {
+                if (link.href === window.location.href) {
+                    link.classList.add('active');
+                }
+            });
+
+        </script>
+
+    </body>
+
+</html>

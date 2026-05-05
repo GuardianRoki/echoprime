@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>EchoPrime: Characters</title>
+        <link rel="stylesheet" href="echoprime.css">
+    </head>
+
+    <body>
+
+        <header>
+            <h1>EchoPrime</h1>
+            <h2>Wuthering Waves Echo/Build Optimizer</h2>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="characters.html">Characters</a></li>
+                <li><a href="calculator.html">Calculator</a></li>
+                <li><a href="echodb.html">Echo DB</a></li>
+                <li><a href="guide.html">Guide</a></li>
+                <li><a href="glossary.html">Glossary</a></li>
+            </ul>
+        </nav>
+
+        <div class="wrapper">
+
+            <main>
+
+            <div id="char-detail" class="char-detail hidden">
+
+                <div class="detail-back">
+                    <a href="#" onclick="closeDetail(); return false;">&#8592; Back to Characters</a>
+                </div>
+
+                <div class="detail-body">
+
+                    <div class="detail-col detail-col-left">
+                        <div class="detail-portrait-box">
+                            <img id="detail-img" src="" alt="" width="140" height="140">
+                            <p id="detail-name" class="detail-name"></p>
+                            <p id="detail-element" class="detail-element"></p>
+                        </div>
+                        <div class="detail-info-box">
+                            <div class="info-row">
+                                <span class="info-key">Region</span>
+                                <span id="d-region" class="info-val"></span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-key">Element</span>
+                                <span id="d-element" class="info-val"></span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-key">Weapon</span>
+                                <span id="d-weapon" class="info-val"></span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-key">Role</span>
+                                <span id="d-role" class="info-val"></span>
+                            </div>
+                        </div>
+                        <div class="detail-guide-link">
+                            <a id="d-guide-link" href="guide.html">View Echo Build Guide &#8594;</a>
+                        </div>
+                    </div>
+
+                    <div class="detail-col detail-col-mid">
+                        <h3 class="detail-col-title">Weapon</h3>
+                        <div class="weapon-box">
+                            <p id="d-weapon-name" class="weapon-name"></p>
+                            <p id="d-weapon-type" class="weapon-type"></p>
+                            <p id="d-weapon-note" class="weapon-note"></p>
+                        </div>
+
+                        <h3 class="detail-col-title" class="detail-col-title combat-title">Combat Style</h3>
+                        <div class="mechanic-box" id="mechanic-box">
+                            <p id="d-mechanic-name" class="mechanic-name"></p>
+                            <p id="d-mechanic-desc" class="mechanic-desc"></p>
+                        </div>
+
+                        <div id="resonance-mode-section" class="res-mode-box">
+                            <h3 class="detail-col-title">Resonance Mode</h3>
+                            <div class="mechanic-box" class="mechanic-box mechanic-box-purple">
+                                <p id="d-resmode-name" class="mechanic-name"></p>
+                                <p id="d-resmode-desc" class="mechanic-desc"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-col detail-col-right">
+                        <h3 class="detail-col-title">Resonance Chain</h3>
+                        <div id="node-list" class="node-list"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id="char-list">
+
+                <section class="region-section">
+                    <h2 class="region-title">Lahai-Roi</h2>
+                    <p class="region-desc">Characters from Lahai-Roi, the newest region in the game.</p>
+                    <ul class="char-grid">
+
+                        <li class="char-card" onclick="showChar('aemeath')">
+                            <img src="Aemeath_Icon.webp" alt="Aemeath" width="100" height="100">
+                            <p class="char-card-name">Aemeath</p>
+                            <p class="char-element">Element: Fusion</p>
+                        </li>
+
+                        <li class="char-card" onclick="showChar('luuk')">
+                            <img src="Luuk_Icon.webp" alt="Luuk Herssen" width="100" height="100">
+                            <p class="char-card-name">Luuk Herssen</p>
+                            <p class="char-element">Element: Spectro</p>
+                        </li>
+
+                        <li class="char-card" onclick="showChar('lynae')">
+                            <img src="Lynae_Icon.webp" alt="Lynae" width="100" height="100">
+                            <p class="char-card-name">Lynae</p>
+                            <p class="char-element">Element: Spectro</p>
+                        </li>
+
+                        <li class="char-card" onclick="showChar('mornye')">
+                            <img src="Mornye_Icon.webp" alt="Mornye" width="100" height="100">
+                            <p class="char-card-name">Mornye</p>
+                            <p class="char-element">Element: Fusion</p>
+                        </li>
+
+                        <li class="char-card" onclick="showChar('sigrika')">
+                            <img src="Sigrika_Icon.webp" alt="Sigrika" width="100" height="100">
+                            <p class="char-card-name">Sigrika</p>
+                            <p class="char-element">Element: Aero</p>
+                        </li>
+
+                        <li class="char-card placeholder">
+                            <div class="placeholder-icon">+</div>
+                            <p class="char-card-name">Coming Soon</p>
+                            <p class="char-element">Element: ???</p>
+                        </li>
+
+                        <li class="char-card placeholder">
+                            <div class="placeholder-icon">+</div>
+                            <p class="char-card-name">Coming Soon</p>
+                            <p class="char-element">Element: ???</p>
+                        </li>
+
+                    </ul>
+                </section>
+
+                <section class="region-section">
+                    <h2 class="region-title">Rinascita</h2>
+                    <p class="region-desc">Characters from Rinascita, representing Italy, and Septimont, the gladiator island.</p>
+                    <ul class="char-grid">
+
+                        <li class="char-card" onclick="showChar('cartethiya')">
+                            <img src="Cartethiya_Icon.webp" alt="Cartethiya" width="100" height="100">
+                            <p class="char-card-name">Cartethiya</p>
+                            <p class="char-element">Element: Aero</p>
+                        </li>
+
+                        <li class="char-card" onclick="showChar('augusta')">
+                            <img src="Augusta_Icon.webp" alt="Augusta" width="100" height="100">
+                            <p class="char-card-name">Augusta</p>
+                            <p class="char-element">Element: Electro</p>
+                        </li>
+
+                        <li class="char-card" onclick="showChar('iuno')">
+                            <img src="Iuno_Icon.webp" alt="Iuno" width="100" height="100">
+                            <p class="char-card-name">Iuno</p>
+                            <p class="char-element">Element: Aero</p>
+                        </li>
+
+                        <li class="char-card" onclick="showChar('lupa')">
+                            <img src="Lupa_Icon.webp" alt="Lupa" width="100" height="100">
+                            <p class="char-card-name">Lupa</p>
+                            <p class="char-element">Element: Fusion</p>
+                        </li>
+
+                        <li class="char-card" onclick="showChar('brant')">
+                            <img src="Brant_Icon.webp" alt="Brant" width="100" height="100">
+                            <p class="char-card-name">Brant</p>
+                            <p class="char-element">Element: Fusion</p>
+                        </li>
+
+                        <li class="char-card placeholder">
+                            <div class="placeholder-icon">+</div>
+                            <p class="char-card-name">Coming Soon</p>
+                            <p class="char-element">Element: ???</p>
+                        </li>
+
+                    </ul>
+                </section>
+
+                <section class="region-section">
+                    <h2 class="region-title">Huanglong</h2>
+                    <p class="region-desc">Characters from Huanglong, the first region, representing China.</p>
+                    <ul class="char-grid">
+
+                        <li class="char-card" onclick="showChar('jinhsi')">
+                            <img src="Jinhsi_Icon.webp" alt="Jinhsi" width="100" height="100">
+                            <p class="char-card-name">Jinhsi</p>
+                            <p class="char-element">Element: Spectro</p>
+                        </li>
+
+                        <li class="char-card" onclick="showChar('changli')">
+                            <img src="Changli_Icon.webp" alt="Changli" width="100" height="100">
+                            <p class="char-card-name">Changli</p>
+                            <p class="char-element">Element: Fusion</p>
+                        </li>
+
+                        <li class="char-card" onclick="showChar('jiyan')">
+                            <img src="Jiyan_Icon.webp" alt="Jiyan" width="100" height="100">
+                            <p class="char-card-name">Jiyan</p>
+                            <p class="char-element">Element: Aero</p>
+                        </li>
+
+                        <li class="char-card" onclick="showChar('xiangliYao')">
+                            <img src="XiangliYao_Icon.webp" alt="Xiangli Yao" width="100" height="100">
+                            <p class="char-card-name">Xiangli Yao</p>
+                            <p class="char-element">Element: Electro</p>
+                        </li>
+
+                        <li class="char-card" onclick="showChar('qiuyuan')">
+                            <img src="Qiuyuan_Icon.webp" alt="Qiuyuan" width="100" height="100">
+                            <p class="char-card-name">Qiuyuan</p>
+                            <p class="char-element">Element: Aero</p>
+                        </li>
+
+                        <li class="char-card placeholder">
+                            <div class="placeholder-icon">+</div>
+                            <p class="char-card-name">Coming Soon</p>
+                            <p class="char-element">Element: ???</p>
+                        </li>
+
+                    </ul>
+                </section>
+
+                <section class="region-section">
+                    <h2 class="region-title">Black Shores</h2>
+                    <p class="region-desc">Characters from or affiliated with the Black Shores.</p>
+                    <ul class="char-grid">
+
+                        <li class="char-card" onclick="showChar('galbrena')">
+                            <img src="Galbrena_Icon.webp" alt="Galbrena" width="100" height="100">
+                            <p class="char-card-name">Galbrena</p>
+                            <p class="char-element">Element: Fusion</p>
+                        </li>
+
+                        <li class="char-card" onclick="showChar('shorekeeper')">
+                            <img src="Shorekeeper_Icon.webp" alt="Shorekeeper" width="100" height="100">
+                            <p class="char-card-name">Shorekeeper</p>
+                            <p class="char-element">Element: Spectro</p>
+                        </li>
+
+                        <li class="char-card" onclick="showChar('aalto')">
+                            <img src="Aalto_Icon.webp" alt="Aalto" width="100" height="100">
+                            <p class="char-card-name">Aalto</p>
+                            <p class="char-element">Element: Aero</p>
+                        </li>
+
+                        <li class="char-card" onclick="showChar('encore')">
+                            <img src="Encore_Icon.webp" alt="Encore" width="100" height="100">
+                            <p class="char-card-name">Encore</p>
+                            <p class="char-element">Element: Fusion</p>
+                        </li>
+
+                        <li class="char-card" onclick="showChar('camellya')">
+                            <img src="Camellya_Icon.webp" alt="Camellya" width="100" height="100">
+                            <p class="char-card-name">Camellya</p>
+                            <p class="char-element">Element: Havoc</p>
+                        </li>
+
+                        <li class="char-card placeholder">
+                            <div class="placeholder-icon">+</div>
+                            <p class="char-card-name">Coming Soon</p>
+                            <p class="char-element">Element: ???</p>
+                        </li>
+
+                    </ul>
+                </section>
+
+            </div>
+
+            <div class="clear"></div>
+
+            </main>
+
+            <footer>
+                <p>EchoPrime is a fan made tool and is not affiliated with Kuro Games.</p>
+            </footer>
+
+        </div>
+
+        <script>
+
+            var characters = {
+
+                aemeath: {
+                    name: "Aemeath",
+                    element: "Fusion",
+                    region: "Lahai-Roi",
+                    weapon: "Sword",
+                    role: "Main DPS",
+                    img: "Aemeath_Icon.webp",
+                    weaponName: "Everbright Polestar",
+                    weaponType: "Sword",
+                    weaponNote: "Aemeath's signature weapon. Increases All-Attribute DMG Bonus. On Tune Rupture or Fusion Burst, her Resonance Liberation DMG ignores a portion of enemy DEF and Fusion RES.",
+                    mechanicName: "Kit Summary",
+                    mechanicDesc: "Aemeath is a dual-mode main DPS who switches between Resonance Mode: Tune Rupture for single target and Resonance Mode: Fusion Burst for AoE, set before combat. Her Forte circuit tracks Synchronization Rate, built through attacks and Sync Strikes, and Resonance Rate, built by spending Synchronization Rate on her enhanced Seraphic Duet skill. When both are full she can cast Heavenfall Edict: Finale, her biggest hit. In Tune Rupture mode, Seraphic Duet removes Rupturous Trail stacks and deals bonus Tune Rupture DMG. In Fusion Burst mode it detonates Fusion Trail stacks. Her Outro grants 20% All-DMG Amplification to teammates who can apply her trail type.",
+                    resModeName: "Tune Rupture Response: Starburst",
+                    resModeDesc: "In Resonance Mode: Tune Rupture, when a teammate triggers a Tune Break on a target causing Tune Rupture: Interfered, Aemeath triggers Tune Rupture Response: Starburst, dealing Fusion DMG to nearby affected targets.",
+                    nodes: [
+                        { num: "S1", name: "Gilded Glimmer of the First Dawn", desc: "In Instant Response, Heavy Attack: Aemeath and Heavy Attack: Mech gain 300% Crit DMG and pull in nearby targets while charging. After being out of combat for 4 seconds without casting a heavy attack or Finale, Aemeath enters Instant Response: Brilliance, which inherits all Instant Response effects and persists outside Heavenfall Edict: Unbound. While in Brilliance and outside Unbound, casting Charged II heavy attacks grants 100 Synchronization Rate. Also unlocks Sealed Trail: on defeating a target with trail stacks, Aemeath records the highest stack count and transfers it to the next target she hits." },
+                        { num: "S2", name: "Downy Notes of Snowfluff", desc: "Increases the DMG Multiplier of Seraphic Duet: Overture and Encore by 100% each. In Tune Rupture mode, when the bonus Tune Rupture DMG instances hit the same target repeatedly, that target takes 20% more DMG per hit, stacking up to 5 times for 1 second. In Fusion Burst mode, Seraphic Duet's Fusion Burst multiplier is further increased to 400% against the main target while in Stardust Resonance, and Fusion Trail stacks additionally boost the DMG Multiplier of Fusion Trail triggered by Seraphic Duet." },
+                        { num: "S3", name: "Fervor Slightly Burns Bright as New", desc: "Increases the DMG Multiplier of Heavenfall Edict: Finale by 100% and Heavenfall Edict: Overdrive by 40%. In Instant Response, heavy attacks now inflict Tune Rupture: Shifting or Fusion Burst on nearby targets based on her active mode. Her Inherent Skill Between the Stars is replaced with an upgraded version that removes the one-trigger-per-Resonator restriction, letting her fully self-activate her Crit DMG and Finale Amplification buffs solo." },
+                        { num: "S4", name: "Ethereal Waltz on Binary Tides", desc: "When casting Intro Skill Songs Across the Universe, Intro Skill Debut of Meteoric Radiance, Resonance Skill Sync Strike, or Resonance Skill Seraphic Duet, all Resonators in the team gain 20% All-Attribute DMG Bonus for 30 seconds." },
+                        { num: "S5", name: "Voyage to the Astral Shore", desc: "When Aemeath defeats a target directly with her skills, her Starflux is reset to 100. When taking fatal damage, Aemeath is knocked out and transforms into a 2D Digital Ghost for 5 seconds. While in Digital Ghost state, she grants all Resonators in the team a Shield equal to 360% of her ATK for 5 seconds. When she exits the Digital Ghost state she revives with 100% of her Max HP and 30 points of Resonance Energy restored. This effect can only trigger once every 10 minutes." },
+                        { num: "S6", name: "A Zephyr-Kissed Journey to You", desc: "Heavenfall Edict: Finale DMG is increased by 40% as an independent multiplier. In Resonance Mode: Tune Rupture while in combat, Tune Rupture DMG can now critically hit with a fixed Crit Rate of 80% and Crit DMG of 275%. The same applies to Fusion Burst DMG in Resonance Mode: Fusion Burst while in combat. The stacks of Rupturous Trail and Fusion Trail inflicted through her Forte Circuit skill To Sculpt the Silence are also doubled." }
+                    ]
+                },
+
+                luuk: {
+                    name: "Luuk Herssen",
+                    element: "Spectro",
+                    region: "Lahai-Roi",
+                    weapon: "Gauntlets",
+                    role: "Main DPS",
+                    img: "Luuk_Icon.webp",
+                    weaponName: "Daybreaker's Spine",
+                    weaponType: "Gauntlets",
+                    weaponNote: "Signature weapon details to be added.",
+                    mechanicName: "Forte Circuit: Spark from the Frost",
+                    mechanicDesc: "Luuk's unique mechanic details will be added once fully available.",
+                    nodes: [
+                        { num: "S1", name: "Gold Kindled in Ash", desc: "Luuk Herssen gains 150% Mid-Air Attack DMG Bonus. The max stack limit of Dawnlit Keep is increased by 1. When in the Aureate Judge state, casting Resonance Skill Aureole of Execution grants 1 stack of Dawnlit Keep." },
+                        { num: "S2", name: "Avalanche Roaring in Eyes", desc: "The DMG Multiplier of Resonance Liberation Rewritten in Winter's Margins is increased by 60%. This effect is stackable with that of Endnotes in the Endgame. Inherent Skill Uncaused Diagnosis is enhanced: When Luuk Herssen deals damage to targets inflicted with Tune Strain - Interfered, every 10 points of Tune Break Boost he has now Amplify this instance of damage by 10%. This effect now increases the DMG Amplification up to 60% instead of 30%." },
+                        { num: "S3", name: "Spine Tempered by Golden Rain", desc: "The DMG Multipliers of all forms of  Resonance skill Aureole of Execution are increased by 136% in the Aureate Judge state. Casting Aureole of Execution: Glare increases the DMG Multipliers of the next Mid-Attack - Gavel of Earthshaker and Ichor Deposit by 136%. Inherent Skill Pulses Under the Snow is enhanced: Perpetuating Daytime now stacks up to 4 times." },
+                        { num: "S4", name: "Pulse Thrumming Under Rime", desc: "After a Resonator in the team deals Tune Break DMG, all Resonators in the team deal 20% more DMG for 20s. This effect is unstackable." },
+                        { num: "S5", name: "Through the Stillness of Snowstorm", desc: "Intro Skill Before Injection of Dawn and Outro Skill Bow to the Last Light gain 80% DMG Bonus. Resonance Skill Golden Reflux has its DMG Multiplier increased by 50% and its Cooldown reduced by 2s, and gains 1 more charge." },
+                        { num: "S6", name: "Dawn Unfurling over Frostlands", desc: "When nearby Resonators in the team deal Tune Break DMG, all forms of Resonance Skill Aureole of Execution , Ichor Deposit, and Mid-Attack - Gavel of Earthshaker deal 30% more DMG to the target for 25s. Each stack of Endnotes on the Endgame additionally grants Resonance Liberation Rewritten in Winter's Margins 40% DMG Bonus, up to 120%. When Luuk Herssen deals damage to targets inflicted with Tune Strain - Interfered, the stack count of Tune Strain - Interfered on the target is increased by 2. This effect ignores the max stack limit." }
+                    ]
+                },
+
+                lynae: {
+                    name: "Lynae",
+                    element: "Spectro",
+                    region: "Lahai-Roi",
+                    weapon: "Pistols",
+                    role: "Sub-DPS",
+                    img: "Lynae_Icon.webp",
+                    weaponName: "Spectrum Blaster",
+                    weaponType: "Pistols",
+                    weaponNote: "Signature weapon details to be added.",
+                    mechanicName: "Kit Summary",
+                    mechanicDesc: "Lynae is a Spectro sub-DPS and generalist buffer who excels in Tune Break teams. Her Intro Skill grants 100 Overflow and applies Photochromic Flux to targets, which inflicts either Tune Rupture or Tune Strain depending on her active mode set before combat. She builds Overflow through attacks and converts it into Lumiflow for her charged Spark Collision heavy attack, which is her primary personal damage source. Her Resonance Liberation grants the entire team a 24% All-Type DMG Bonus, and her Outro provides the next character 15% All-Type DMG Deepen and 25% Resonance Liberation DMG Deepen. She is best understood as one half of the Tune Break core alongside Mornye.",
+                    resModeName: "Resonance Mode: Tune Rupture or Tune Strain",
+                    resModeDesc: "Lynae has two Resonance Mode options that respond to Tune Breaks differently. In Tune Rupture mode, when a Tune Break is triggered on an enemy, Lynae deals a burst of massive bonus Spectro DMG as her response, making her a strong offensive support. In Tune Strain mode, instead of dealing damage she grants herself and nearby team members a damage boost in response to a Tune Break, functioning more as a pure amplifier. The correct mode must be set before combat based on the team composition.",
+                    nodes: [
+                        { num: "S1", name: "Days to be Painted Like a Canvas", desc: "Basic Attack Polychrome Leap DMG Multiplier increased by 120%. Spray Paint duration increased by 100% and pulls targets inward every 6s. Immune to interruptions during Polychrome Leap and Visual Impact. During Optical Sampling Stage, after 2s out of combat, restore 120 Overflow." },
+                        { num: "S2", name: "Into Lights' Vanishing Point", desc: "Gain 25% All-DMG Amplification. Outro Skill now grants the incoming Resonator 25% All-DMG Amplification for 14s or until switched out." },
+                        { num: "S3", name: "For One Brilliant Moment", desc: "Visual Impact and Iridescent Splash DMG Multipliers increased by 90%. With 120 or more Lumiflow, gain 1 stack of Premixed Hue per second up to 25. Each stack increases Spectro DMG through Additive Color by 55%, removed when Additive Color ends or Lumiflow drops below 120." },
+                        { num: "S4", name: "Shadows of a Wind Racer", desc: "ATK is increased by 20%." },
+                        { num: "S5", name: "Visions of a Future Unbound", desc: "Resonance Liberation Prismatic Overblast DMG Multiplier increased by 70%." },
+                        { num: "S6", name: "Painted in My True Color", desc: "Each cast of Kaleidoscopic Parade Graffiti Blast or Mid-air Heavy Attack grants 1 stack of Color of Soul up to 3. Each stack increases Polychrome Leap and Visual Impact DMG by 30%, removed after either is cast. Polychrome Leap resets Mid-air Heavy Attack charges. Lumiflow upper limit increased to 360. Lynae stays in Kaleidoscopic Parade after Outro Skill. Intro Skill during Kaleidoscopic Parade restores 120 Lumiflow." }
+                    ]
+                },
+
+                mornye: {
+                    name: "Mornye",
+                    element: "Fusion",
+                    region: "Lahai-Roi",
+                    weapon: "Broadblade",
+                    role: "Support",
+                    img: "Mornye_Icon.webp",
+                    weaponName: "Starfield Calibrator",
+                    weaponType: "Broadblade",
+                    weaponNote: "Signature weapon details to be added.",
+                    mechanicName: "To be confirmed",
+                    mechanicDesc: "Mornye's unique mechanic details will be added once fully available.",
+                    nodes: [
+                        { num: "S1", name: "The Silent Observer", desc: "Basic Attack Wide Field Observation Mode is immune to interruption. Interfered Marker duration extended by 150% and grants DMG increase even without Tune Rupture or Tune Strain Interfered active. Applying Observation Marker also inflicts Interfered Marker." },
+                        { num: "S2", name: "Morning Star of Entropy", desc: "All nearby Resonators gain Crit. DMG increase against targets with Interfered Marker: every 1% of Mornye Energy Regen over 100% grants 0.2% Crit. DMG increase up to 32%. Syntony Field and High Syntony Field increase Off-Tune Buildup Rate of all nearby Resonators by 20%." },
+                        { num: "S3", name: "Blueprint of Recursion", desc: "Casting Resonance Skill Distributed Array additionally restores 25 Concerto Energy and 100 Relative Momentum, triggered once every 25s." },
+                        { num: "S4", name: "Latent Variables of the Cosmos", desc: "The healing of High Syntony Field is increased by 30%." },
+                        { num: "S5", name: "Time Dilation Effect", desc: "Resonance Liberation Critical Protocol DMG Multiplier increased by 40%. Tune Rupture Response Particle Jet DMG Multiplier increased by 160%." },
+                        { num: "S6", name: "To the Far Shores of the Stars", desc: "Resonance Liberation Critical Protocol deals 400% more DMG. If Mornye has not been in combat for over 4s, restores Resonance Energy equal to 10% of Max Resonance Energy every 0.2s." }
+                    ]
+                },
+
+                sigrika: {
+                    name: "Sigrika",
+                    element: "Aero",
+                    region: "Lahai-Roi",
+                    weapon: "Gauntlets",
+                    role: "Main DPS",
+                    img: "Sigrika_Icon.webp",
+                    weaponName: "Solsworn Ciphers",
+                    weaponType: "Gauntlets",
+                    weaponNote: "Signature weapon details to be added.",
+                    mechanicName: "To be confirmed",
+                    mechanicDesc: "Sigrika's unique mechanic details will be added once fully available.",
+                    nodes: [
+                        { num: "S1", name: "The Gleam Meant for Radiance", desc: "DMG Multipliers of Basic Attack Elucidated, Dodge Counter Decipher, Resonance Skill BIG BOOMY BOOM!, and Resonance Skill Soliskin to the Aid increased by 70%. Immune to interruptions while casting these skills. Encapsulated now stacks up to 3 times and Outro Skill grants 1 additional stack." },
+                        { num: "S2", name: "The Bitterness Steeped in Hope", desc: "Forte Circuit Learn My True Name DMG Multiplier increased by 120%. When not in combat for over 4s, Sigrika gains Divergent, available once every 4s." },
+                        { num: "S3", name: "I Flee, Yet I Seek", desc: "Innate Gift? now stacks up to 4 times and is no longer removed after casting Forte Circuit or switching off the field. All stacks removed every 30s out of combat." },
+                        { num: "S4", name: "I Lose, Yet I Gain", desc: "When Resonators in the team cast Echo Skill, all Resonators gain 20% ATK increase for 20s." },
+                        { num: "S5", name: "Until Submerged by the Dark", desc: "Resonance Liberation Where Trust Leads Me! DMG Multiplier increased by 30%." },
+                        { num: "S6", name: "True Names Resurfaced, Rising in Light", desc: "Targets take 30% more DMG from Sigrika. Each stack of Innate Gift? grants 15% DMG Amplification up to 60% and causes 7.5% DEF ignore up to 30% on Runic Outburst, Runic Chain Whip, Runic Soliskin, and Forte Circuit Learn My True Name." }
+                    ]
+                },
+
+                cartethiya: {
+                    name: "Cartethiya",
+                    element: "Aero",
+                    region: "Rinascita",
+                    weapon: "Sword",
+                    role: "Main DPS",
+                    img: "Cartethiya_Icon.webp",
+                    weaponName: "Defier's Thorn",
+                    weaponType: "Sword",
+                    weaponNote: "Signature weapon details to be added.",
+                    mechanicName: "To be confirmed",
+                    mechanicDesc: "Cartethiya's unique mechanic details will be added.",
+                    nodes: [
+                        { num: "S1", name: "Crown Destined by Fate", desc: "Gain Zeal for 10s when Cartethiya or Fleurdelys defeats targets with Aero Erosion. In Zeal state, the next damaging move raises Aero Erosion stacks on targets to the highest count among defeated targets. When Fleurdelys Conviction hits 30/60/90/120, Fleurdelys gains 25% Crit. DMG for 15s up to 4 stacks." },
+                        { num: "S2", name: "Blade Broken by Tempest", desc: "Casting Resonance Liberation A Knight Heartfelt Prayers increases max Aero Erosion stack limit by 3 within range and the next attack inflicts 3 Aero Erosion stacks on all nearby targets triggering Aero Erosion DMG once without consuming stacks. Basic Attack, Heavy Attack, Dodge Counter, and Intro Skill DMG Multipliers increased by 50%. Mid-air Attack DMG Multiplier increased by 200%." },
+                        { num: "S3", name: "Prisoner Hanged in the Tower", desc: "Basic Attack Fleurdelys Stage 5, Mid-air Attack Fleurdelys Stage 2, Enhanced Heavy Attack Fleurdelys, and Resonance Skill May Tempest Break the Tides inflict 2 Aero Erosion stacks. Resonance Liberation Blade of Howling Squall DMG Multiplier increased by 100%." },
+                        { num: "S4", name: "Sacrifice Made for Salvation", desc: "After Resonators inflict Havoc Bane, Fusion Burst, Spectro Frazzle, Electro Flare, Glacio Chafe, or Aero Erosion, all Resonators gain 20% DMG Bonus for all Attributes for 20s." },
+                        { num: "S5", name: "Hope Reshaped in Storms", desc: "When Cartethiya or Fleurdelys takes a fatal blow, they are not downed and instead gain a Shield equal to 20% of Cartethiya Max HP for 10s, once every 10 minutes. HP cost for Resonance Liberation A Knight Heartfelt Prayers reduced to 25% of Max HP." },
+                        { num: "S6", name: "Freedom Found in Storm's Wake", desc: "After casting Resonance Liberation Blade of Howling Squall, raise Aero Erosion stacks on target hit to max and Blade of Howling Squall no longer removes them. Within 30s after Intro or Liberation skills, when any Resonator inflicts Aero Erosion on targets at max stacks, immediately trigger Aero Erosion DMG once. Targets take 40% more DMG from Fleurdelys." }
+                    ]
+                },
+
+                augusta: {
+                    name: "Augusta",
+                    element: "Electro",
+                    region: "Rinascita",
+                    weapon: "Broadblade",
+                    role: "Main DPS",
+                    img: "Augusta_Icon.webp",
+                    weaponName: "Thunderflare Dominion",
+                    weaponType: "Broadblade",
+                    weaponNote: "Signature weapon details to be added.",
+                    mechanicName: "To be confirmed",
+                    mechanicDesc: "Augusta's unique mechanic details will be added.",
+                    nodes: [
+                        { num: "S1", name: "Stained in Scorched Earth", desc: "Each stack of Crown of Wills additionally increases Crit. DMG by 15%. Max stacks increased to 2. Casting Intro Skill Stride of Goldenflare grants 1 stack. Undying Sunlight: Strike, Leap, and Plunge are immune to interruption." },
+                        { num: "S2", name: "Cleansed in Crimson War", desc: "Crown of Wills now also increases Crit. Rate by 20% per stack. For every 1% Crit. Rate over 100%, Augusta gains 2% Crit. DMG up to 100%." },
+                        { num: "S3", name: "Forged in Rot and Ruin", desc: "Heavy Attack Thunderoar: Backstep, Dodge Counter Thunderoar: Backstep, Heavy Attack Thunderoar: Spinslash, Thunderoar: Uppercut, Resonance Skill Undying Sunlight: Plunge, and Resonance Liberation Sublime is the Sun DMG Multipliers increased by 25%." },
+                        { num: "S4", name: "Ascent in Sun and Glory", desc: "Casting Intro Skill Stride of Goldenflare increases ATK of all team Resonators by 20% for 30s." },
+                        { num: "S5", name: "Unshaken in Wrathful Tides", desc: "Shield provided by Inherent Skill Glory Favor increased by 50%." },
+                        { num: "S6", name: "Engraved in Radiant Light", desc: "Augusta can hold up to 4 stacks of Crown of Wills. For every 1% Crit. Rate over 150%, gain 2% Crit. DMG up to 50%. Heavy Attack Spinslash and Uppercut each grant 2 stacks of Crown of Wills and trigger Thunder Rage dealing two Electro DMG instances equal to 100% ATK each, considered Heavy Attack DMG." }
+                    ]
+                },
+
+                iuno: {
+                    name: "Iuno",
+                    element: "Aero",
+                    region: "Rinascita",
+                    weapon: "Gauntlets",
+                    role: "Sub-DPS",
+                    img: "Iuno_Icon.webp",
+                    weaponName: "Moongazer's Sigil",
+                    weaponType: "Gauntlets",
+                    weaponNote: "Signature weapon details to be added.",
+                    mechanicName: "To be confirmed",
+                    mechanicDesc: "Iuno's unique mechanic details will be added.",
+                    nodes: [
+                        { num: "S1", name: "Wax or Wane, All Guild the Bough", desc: "When in Lunar Cycle, ATK increased by 40%. When inside Full Moon Domain, restores 1 Resonance Energy per second. Arc Beyond the Edge and Heavy Attack Absolute Fullness become immune to interruption." },
+                        { num: "S2", name: "Day or Night, Let This Be Eternal", desc: "Resonators in the team with 10 stacks of Blessing of the Wan Light gain an additional 40% all DMG Amplification." },
+                        { num: "S3", name: "I Drink Deep of Their Forgetting", desc: "When in Lunar Cycle, DMG dealt by Moonbow Basic Attack, Arc Beyond the Edge, and Moonbow Dodge Counter is Amplified by 65%. Casting Arc Beyond the Edge within a certain period after Moonbow Basic Attack or Dodge Counter does not reset the Moonbow Basic Attack cycle." },
+                        { num: "S4", name: "Rainy Season Dwell in My Eyes", desc: "Casting Heavy Attack Absolute Fullness grants a Shield equal to 160% of Iuno ATK to all team Resonators for 30s." },
+                        { num: "S5", name: "A Thousand Futile Glimpses", desc: "Iuno gains 20% Resonance Liberation DMG Bonus." },
+                        { num: "S6", name: "I Am the Constant in the Chaos", desc: "Heavy Attack Absolute Fullness DMG Multiplier increased by 1600%. Upon casting, Iuno re-enters Lunar Cycle New Moon, gains 100 Sentience, and resets all cooldowns of Arc Beyond the Edge." }
+                    ]
+                },
+
+                lupa: {
+                    name: "Lupa",
+                    element: "Fusion",
+                    region: "Rinascita",
+                    weapon: "Broadblade",
+                    role: "Support",
+                    img: "Lupa_Icon.webp",
+                    weaponName: "Wildfire Mark",
+                    weaponType: "Broadblade",
+                    weaponNote: "Signature weapon details to be added.",
+                    mechanicName: "To be confirmed",
+                    mechanicDesc: "Lupa's unique mechanic details will be added.",
+                    nodes: [
+                        { num: "S1", name: "Behold the Nameless One", desc: "Casting Resonance Liberation Fire-Kissed Glory restores 10 Concerto Energy and increases Crit. Rate by 20% for 10s. Immune to interruption when casting Dance With the Wolf: Climax." },
+                        { num: "S2", name: "Every Ground, Her Hunting Field", desc: "Fire-Kissed Glory, Heavy Attack Wolf Gnawing, Wolf Claw, and Mid-air Attack Firestrike give 20% Fusion DMG Bonus to all team Resonators for 30s, stacking up to 2 times." },
+                        { num: "S3", name: "Wolfflame Howls in Her Wake", desc: "Intro Skill Nowhere to Run! DMG Multiplier increased by 100%. Pack Hunt effect no longer requires 3 Fusion Resonators. Glory effect modified: Resonance Liberation additionally grants all Resonators ignore 15% Fusion RES of targets for 35s." },
+                        { num: "S4", name: "High and Aflame Is Her Banner", desc: "Dance With the Wolf: Climax DMG Multiplier increased by 125%." },
+                        { num: "S5", name: "Embrace the Thunderous Triumph", desc: "Casting Intro Skill Try Focusing Eh? or Nowhere to Run! gives 15% Resonance Liberation DMG Bonus for 10s." },
+                        { num: "S6", name: "To the Brightest FLaming Star", desc: "Forte Circuit Dance With the Wolf: Climax, Resonance Liberation Fire-Kissed Glory, and Intro Skill Nowhere to Run! ignore 30% of target DEF. Resonance Skill Feral Fang restores 100 Wolflame on hit once per 20s. Forte Circuit Dance With the Wolf is replaced with Dance With the Wolf: Climax. Intro Skill Nowhere to Run! no longer ends Pack Hunt and Glory." }
+                    ]
+                },
+
+                brant: {
+                    name: "Brant",
+                    element: "Fusion",
+                    region: "Rinascita",
+                    weapon: "Sword",
+                    role: "Sub-DPS",
+                    img: "Brant_Icon.webp",
+                    weaponName: "Unflickering Valor",
+                    weaponType: "Sword",
+                    weaponNote: "Signature weapon details to be added.",
+                    mechanicName: "To be confirmed",
+                    mechanicDesc: "Brant's unique mechanic details will be added.",
+                    nodes: [
+                        { num: "S1", name: "By Currents and Winds", desc: "Returned from Ashes temporarily stagnates nearby targets while casting, removed when Brant switches off. After casting Intro Skill Applaud for Me! or each mid-air flip, Brant DMG dealt increases by 20% for 5s up to 3 stacks." },
+                        { num: "S2", name: "For Smiles and Cheers", desc: "Casting Mid-air Attack and Returned from Ashes increases Crit. Rate by 30%. Outro Skill The Course is Set! gains: when the incoming Resonator Resonance Skill hits a target within 20s, Brant blasts that target for Fusion DMG equal to 440% ATK considered Basic Attack DMG, once per second up to 2 times. Remains active when off the field." },
+                        { num: "S3", name: "Through Storms I Sail", desc: "Returned from Ashes DMG Multiplier increased by 42%." },
+                        { num: "S4", name: "To Freedom I Sing", desc: "Shield from Returned from Ashes increased by 20%. Casting Returned from Ashes restores HP for all nearby Resonators equal to 6.60 HP for every 1% Energy Regen." },
+                        { num: "S5", name: "All the World's An Actor's Stage", desc: "Dealing Basic Attack DMG gives Brant 15% Basic Attack DMG Bonus for 10s." },
+                        { num: "S6", name: "All the World's a Captain's Carnevale", desc: "Mid-air Attack DMG Multiplier increased by 30%. Casting Returned from Ashes causes a secondary blast dealing Fusion DMG equal to 30% of Returned from Ashes DMG, considered Basic Attack DMG." }
+                    ]
+                },
+
+                jinhsi: {
+                    name: "Jinhsi",
+                    element: "Spectro",
+                    region: "Huanglong",
+                    weapon: "Broadblade",
+                    role: "Main DPS",
+                    img: "Jinhsi_Icon.webp",
+                    weaponName: "Ages of Harvest",
+                    weaponType: "Broadblade",
+                    weaponNote: "Jinhsi's signature weapon. Provides strong Crit Rate and boosts her Incarnation form damage significantly. Best in slot for her by a wide margin.",
+                    mechanicName: "Kit Summary",
+                    mechanicDesc: "Jinhsi is a Spectro main DPS who enters Incarnation state after casting her Resonance Skill. In Incarnation her basic attacks are replaced with enhanced Spectro hits that scale with Incandescence stacks generated by teammates attacking marked enemies. Her damage is heavily concentrated in Incarnation windows, making teammate coordination essential. Her Outro buffs the next character with Spectro DMG Bonus, making her a strong carry in Spectro team compositions.",
+                    nodes: [
+                        { num: "S1", name: "Abyssal Ascension", desc: "While Jinhsi is in Incarnation, her Spectro DMG Bonus is increased by 20%. This applies directly to her highest damage window and is a straightforward multiplier improvement with no rotation changes required." },
+                        { num: "S2", name: "Chronofrost Repose", desc: "Every time Jinhsi consumes an Incandescence stack in Incarnation, she triggers a bonus Spectro DMG instance. This adds a passive extra hit to every empowered attack she performs, scaling with how many stacks she enters Incarnation with." },
+                        { num: "S3", name: "Celestial Incarnate", desc: "Increases the level of Resonance Skill and Resonance Liberation by 2, up to level 12. Both abilities are central to Jinhsi's damage output, making this a clean upgrade across her two most important skills." },
+                        { num: "S4", name: "Benevolent Grace", desc: "When Jinhsi uses her Resonance Liberation or her enhanced Resonance Skill III, the entire team's Attribute DMG Bonus is increased by 20%. This provides approximately 6.3% total team damage increase and makes Jinhsi a meaningful team amplifier beyond her personal output." },
+                        { num: "S5", name: "Frostfire Illumination", desc: "The DMG Multiplier of her Resonance Liberation is increased by 120%, meaning the original multiplier is multiplied by 2.2. This provides approximately 15.4% personal damage increase and is her largest single node improvement outside of S6." },
+                        { num: "S6", name: "Thawing Triumph", desc: "The DMG Multiplier of her enhanced Resonance Skill III is increased by 45%, and each consumed Incandescence stack further increases that multiplier by an additional 45%. The final total multiplier is calculated as Solar Flare and Star Glamour multipliers each times 1.45, plus Incandescence multiplier times stacks times 1.45, providing approximately 22.3% damage increase." }
+                    ]
+                },
+
+                changli: {
+                    name: "Changli",
+                    element: "Fusion",
+                    region: "Huanglong",
+                    weapon: "Sword",
+                    role: "Main DPS",
+                    img: "Changli_Icon.webp",
+                    weaponName: "Blazing Brilliance",
+                    weaponType: "Sword",
+                    weaponNote: "Changli's signature weapon. Increases ATK. On dealing damage, gain 1 stack of Searing Feather, which can be triggered every 0.5s, and gains 5 stacks of the same effect upon using Resonance Skill. Each stack of Searing Feather gives 4% additional Resonance Skill DMG bonus for up to 14 stacks. After reaching max stacks, all stacks will be removed in 12s.",
+                    mechanicName: "Forte Circuit: Flaming Sacrifice",
+                    mechanicDesc: "Changli's Forte enables her to build stacks of Enflamement through her Resonance Skill, Basic Attack Combo, or Resonance Liberation. At 4 stacks, she may release her Heavy Attack to cast Flaming Sacrifice, dealing Fusion DMG, considered as Resonance Skill DMG.",
+                    nodes: [
+                        { num: "S1", name: "Hidden Thoughts", desc: "Resonance Skill Tripartite Flames and Heavy Attack Flaming Sacrifice increase Changli's DMG dealt by 10% and resistance to interruption." },
+                        { num: "S2", name: "Pursuit of Desires", desc: "Enflamement increases Changli's Crit. Rate by 25% for 8s." },
+                        { num: "S3", name: "Learned Secrets", desc: "Resonance Liberation Radiance of Fealty DMG increased by 80%." },
+                        { num: "S4", name: "Polished Words", desc: "After Intro Skill is cast, all team members' ATK is increased by 20% for 30s." },
+                        { num: "S5", name: "Sacrificed Gains", desc: "Heavy Attack Flaming Sacrifice's Multiplier is increased by 50% and its DMG dealt is increased by 50%." },
+                        { num: "S6", name: "Realized Plans", desc: "Resonance Skill Tripartite Flames, Heavy Attack Flaming Sacrifice, and Resonance Liberation Radiance of Fealty ignore an additional 40% of the target's DEF when dealing damage." }
+                    ]
+                },
+
+                jiyan: {
+                    name: "Jiyan",
+                    element: "Aero",
+                    region: "Huanglong",
+                    weapon: "Broadblade",
+                    role: "Main DPS",
+                    img: "Jiyan_Icon.webp",
+                    weaponName: "Verdant Summit",
+                    weaponType: "Broadblade",
+                    weaponNote: "Jiyan's signature weapon. High base ATK and provides Resonance Liberation DMG Bonus, which directly amplifies his most damaging window. Best in slot.",
+                    mechanicName: "Qingloong Mode",
+                    mechanicDesc: "Qingloong Mode is Jiyan's Resonance Liberation state. While active, his basic attacks are replaced with lance strikes that deal Aero DMG in a wide arc. Each strike also generates Qingloong stacks that increase his damage further as the Liberation continues. The goal of his kit is to have strong buffs from teammates stacked before he enters Qingloong Mode, since all damage multipliers apply during this window.",
+                    nodes: [
+                        { num: "S1", name: "Benevolence", desc: "During Qingloong Mode, every third basic attack deals bonus Aero DMG. This adds a passive rhythm to his rotation and increases his total output during Liberation without requiring any changes to how he is played." },
+                        { num: "S2", name: "Versatility", desc: "Jiyan gains Aero DMG Bonus when Qingloong Mode ends based on how many stacks he accumulated. The buff lasts for 15 seconds, bridging the gap between his Liberation windows and ensuring his damage stays relevant in the downtime." },
+                        { num: "S3", name: "Spectation", desc: "Increases the level of Resonance Skill and Resonance Liberation by 2, up to level 12. His Liberation is the most impactful ability in his kit, so this is his most impactful sequence node." },
+                        { num: "S4", name: "Prudence", desc: "Qingloong Mode now generates stacks 20% faster. More stacks means higher damage multipliers reached sooner within each Liberation window, making this a consistent DPS increase in any content." },
+                        { num: "S5", name: "Resolution", desc: "Increases the level of Basic Attack and Heavy Attack by 2, up to level 12. During Qingloong Mode his basics are his primary damage source, making this node directly relevant to his Liberation output." },
+                        { num: "S6", name: "Fortitude", desc: "Qingloong Mode duration is extended by 2 seconds and the damage multiplier for his final stack tier is increased. These two changes together represent his largest single power spike across all six sequence nodes." }
+                    ]
+                },
+
+                xiangliYao: {
+                    name: "Xiangli Yao",
+                    element: "Electro",
+                    region: "Huanglong",
+                    weapon: "Gauntlets",
+                    role: "Main DPS",
+                    img: "XiangliYao_Icon.webp",
+                    weaponName: "Verity's Handle",
+                    weaponType: "Gauntlets",
+                    weaponNote: "Signature weapon details to be added.",
+                    mechanicName: "To be confirmed",
+                    mechanicDesc: "Xiangli Yao's unique mechanic details will be added.",
+                    nodes: [
+                        { num: "S1", name: "Prodigy of Protégés", desc: "Resonance Skill Law of Reigns additionally launches 6 Convolution Matrices each dealing Resonance Liberation DMG equal to 8% of the skill DMG Multiplier." },
+                        { num: "S2", name: "Traces of Predecessors", desc: "Casting Resonance Skill or Resonance Liberation Cogitation Model increases Crit. DMG by 30% for 8s." },
+                        { num: "S3", name: "Ruins of Ancient", desc: "Resonance Liberation Cogitation Model increases DMG of Decipher, Deduction, Divergence, and Law of Reigns by 63% for 24s up to 5 triggers." },
+                        { num: "S4", name: "Vessel of Rebirth", desc: "Resonance Liberation Cogitation Model grants 25% Resonance Liberation DMG Bonus to all team members for 30s." },
+                        { num: "S5", name: "End of Stars", desc: "Outro Skill Chain Rule DMG Multiplier increased by 222%. Resonance Liberation Cogitation Model DMG Multiplier increased by 100%." },
+                        { num: "S6", name: "Solace of the Ordinary", desc: "Hypercubes from Resonance Liberation Cogitation Model are enhanced, increasing Resonance Skill Law of Reigns DMG Multiplier by 76%." }
+                    ]
+                },
+
+                qiuyuan: {
+                    name: "Qiuyuan",
+                    element: "Aero",
+                    region: "Huanglong",
+                    weapon: "Sword",
+                    role: "Sub-DPS",
+                    img: "Qiuyuan_Icon.webp",
+                    weaponName: "Emerald Sentence",
+                    weaponType: "Sword",
+                    weaponNote: "Signature weapon details to be added.",
+                    mechanicName: "To be confirmed",
+                    mechanicDesc: "Qiuyuan's unique mechanic details will be added.",
+                    nodes: [
+                        { num: "S1", name: "Sword Sheathed, Mind Unclouded", desc: "Thus Spoke the Blade: To Teach, To Save, and To Sacrifice can no longer be interrupted. Qiuyuan gains 20% Crit. Rate." },
+                        { num: "S2", name: "O Blade, I, Who Teach No More", desc: "Bamboo Shade now grants an additional 30% Echo Skill DMG Amplification to all nearby team Resonators." },
+                        { num: "S3", name: "O Blade, I, Who Save No More", desc: "Resonance Liberation Sundering Strike DMG Multiplier increased by 500%. When Concerto Energy is full outside Inksplash of Mind, Resonance Skill is replaced with Straw Cape in Drizzly Rain once every 20s, consuming 60 Concerto Energy to deal Aero DMG equal to 500% ATK. Thus Spoke the Blade attacks gain 600% DMG Multiplier and restore 30 Concerto Energy on hit." },
+                        { num: "S4", name: "O Blade, I, Who Sacrifice No More", desc: "ATK is increased by 20%." },
+                        { num: "S5", name: "O Blade, I, Who Await to be Wielded", desc: "Qiuyuan ignores 15% of target DEF when dealing damage." },
+                        { num: "S6", name: "Thus I Heard, Thus I Saw, Thus I Spoke", desc: "Heavy Attack Thus Spoke the Blade: To Sacrifice stagnates nearby targets for 5s. Upon exiting Inksplash of Mind, deal Aero DMG equal to 600% ATK to all targets in range. Casting Straw Cape in Drizzly Rain increases Crit. DMG by 100% for 6s." }
+                    ]
+                },
+
+                aalto: {
+                    name: "Aalto",
+                    element: "Aero",
+                    region: "Black Shores",
+                    weapon: "Pistols",
+                    role: "Support",
+                    img: "Aalto_Icon.webp",
+                    weaponName: "...",
+                    weaponType: "Pistols",
+                    weaponNote: "Signature weapon details to be added.",
+                    mechanicName: "To be confirmed",
+                    mechanicDesc: "Aalto's unique mechanic details will be added.",
+                    nodes: [
+                        { num: "S1", name: "Trickster's Opening Show", desc: "Cooldown of Resonance Skill Shift Trick reduced by 4s." },
+                        { num: "S2", name: "Mistweaver's Debut", desc: "Mist Avatar inherits 100% more HP from Aalto. When attacking targets taunted by Mist Avatar, ATK is increased by 15%." },
+                        { num: "S3", name: "Hazey Transition", desc: "When Basic Attack or Mid-Air Attack passes through the Gate of Quandary, 2 more bullets are generated dealing 50% of the original hit DMG." },
+                        { num: "S4", name: "Blake Bloom for Finale", desc: "Resonance Skill Mist Bullets damage increased by 30%. Aalto receives 30% less damage in Forte Circuit Mistcloak Dash state." },
+                        { num: "S5", name: "Applause of the Lost", desc: "In Forte Circuit Mistcloak Dash state, Aero DMG Bonus increased by 25% for 6s." },
+                        { num: "S6", name: "Broker's Secrets", desc: "Resonance Liberation Flower in the Mist additionally increases Crit. Rate by 8%. When Heavy Attack passes through the Gate of Quandary, damage dealt is additionally increased by 50%." }
+                    ]
+                },
+
+                encore: {
+                    name: "Encore",
+                    element: "Fusion",
+                    region: "Black Shores",
+                    weapon: "Rectifier",
+                    role: "Main DPS",
+                    img: "Encore_Icon.webp",
+                    weaponName: "...",
+                    weaponType: "Rectifier",
+                    weaponNote: "Encore's signature weapon. Provides Fusion DMG Bonus and boosts her Cosmos damage during her Resonance Liberation. Best in slot by a clear margin.",
+                    mechanicName: "Cosmos",
+                    mechanicDesc: "Encore's Resonance Liberation transforms her into her Wooly alter ego and unleashes a wave of plush creatures called Cosmos that deal continuous Fusion DMG in a wide area. Managing her energy to get her Liberation up as frequently as possible is the core of her gameplay. Her skill also deploys a smaller area denial ability that contributes to her damage between Liberation windows.",
+                    nodes: [
+                        { num: "S1", name: "Wooly's Fairy Tale", desc: "Cosmos now summons an additional Woolies unit on cast. This directly increases her Liberation damage output and the area coverage of her attack without changing her rotation." },
+                        { num: "S2", name: "Sheep-counting Lullaby", desc: "After Cosmos ends, Encore gains a Fusion DMG Bonus buff for 15 seconds. This bridges the gap between her Liberation windows and ensures her skill hits during downtime still deal meaningful damage." },
+                        { num: "S3", name: "Fog? The Black Shores!", desc: "Increases the level of Resonance Skill and Resonance Liberation by 2, up to level 12. Both abilities are central to her damage, making this a straightforward upgrade." },
+                        { num: "S4", name: "Adventure? Let's Go!", desc: "Cosmos duration is extended by 2 seconds. More time in her Liberation state means more Woolies hits and a higher overall damage ceiling per rotation." },
+                        { num: "S5", name: "Hero Takes the Stage!", desc: "Increases the level of Basic Attack and Heavy Attack by 2, up to level 12. Useful for filling time between Liberation windows." },
+                        { num: "S6", name: "Woolies Save the World!", desc: "Cosmos now deals bonus Fusion DMG equal to a percentage of Encore's ATK every second it is active. This is her largest single power spike and makes her Liberation window dramatically more impactful." }
+                    ]
+                },
+
+                camellya: {
+                    name: "Camellya",
+                    element: "Havoc",
+                    region: "Black Shores",
+                    weapon: "Sword",
+                    role: "Main DPS",
+                    img: "Camellya_Icon.webp",
+                    weaponName: "Red Spring",
+                    weaponType: "Sword",
+                    weaponNote: "Signature weapon details to be added.",
+                    mechanicName: "Petal Form",
+                    mechanicDesc: "Camellya's Resonance Skill and certain attack strings cause her to enter Petal Form, a transformed state where her attacks deal Havoc DMG in wide spinning arcs. Her kit revolves around staying in Petal Form as long as possible and building her Bloom stacks, which increase the damage of her follow-up hits. Managing stamina and rotation timing is key to maintaining Petal Form uptime.",
+                    nodes: [
+                        { num: "S1", name: "Somewhere No One Traveled", desc: "While in Petal Form, every third attack triggers a bonus Havoc DMG hit on nearby enemies. This passive proc requires no additional input and consistently adds to her total output." },
+                        { num: "S2", name: "Calling Upon the Silent Rose", desc: "Entering Petal Form grants Camellya a Havoc DMG Bonus buff that lasts for the duration of the form. The buff reapplies each time she re-enters, making frequent re-activation worthwhile." },
+                        { num: "S3", name: "A Bud Adorned by Thorns", desc: "Increases the level of Resonance Skill and Resonance Liberation by 2, up to level 12. Her skill is what initiates Petal Form, so this is her most impactful sequence node." },
+                        { num: "S4", name: "Roots Set Deep In Eternity", desc: "Bloom stacks now have no cap. Previously limited, uncapped stacks mean her follow-up hit damage can scale much higher in longer fights where she has time to build them." },
+                        { num: "S5", name: "Infinity Held in Your Palm", desc: "Increases the level of Basic Attack and Heavy Attack by 2, up to level 12. In Petal Form her basics are her primary damage source, so this node is more impactful for her than for most characters." },
+                        { num: "S6", name: "Bloom For You Thousand Times Over", desc: "Petal Form no longer has a time limit. Camellya can now remain in Petal Form indefinitely as long as she meets the attack input requirements, completely removing the ceiling on her form uptime and making her dramatically stronger in sustained fights." }
+                    ]
+                },
+
+                shorekeeper: {
+                    name: "Shorekeeper",
+                    element: "Spectro",
+                    region: "Black Shores",
+                    weapon: "Rectifier",
+                    role: "Support",
+                    img: "Shorekeeper_Icon.webp",
+                    weaponName: "Stellar Symphony",
+                    weaponType: "Rectifier",
+                    weaponNote: "Signature weapon details to be added.",
+                    mechanicName: "To be confirmed",
+                    mechanicDesc: "Shorekeeper's unique mechanic details will be added.",
+                    nodes: [
+                        { num: "S1", name: "Unspoken Conjecture", desc: "Stellarealms from Resonance Liberation End Loop gain expanded range by 150%, duration extended by 10s, and Intro Skill Discernment no longer ends the existing Stellarealm." },
+                        { num: "S2", name: "Night's Gift and Refusal", desc: "The Outer Stellarealm now increases ATK of all nearby party members by 40%." },
+                        { num: "S3", name: "Infinity Awaits Me", desc: "Casting Resonance Liberation End Loop grants Shorekeeper 20 Concerto Energy, once every 25s." },
+                        { num: "S4", name: "Overflowing Quietude", desc: "Gain 70% additional Healing Bonus when casting Resonance Skill Chaos Theory." },
+                        { num: "S5", name: "Echoes in Silence", desc: "Basic Attack Stage 3 pulling range extended by 50% and Illation by 30%." },
+                        { num: "S6", name: "To the New World", desc: "Intro Skill Discernment DMG Multiplier increased by 42%. Casting Intro Skill Discernment increases Shorekeeper Crit. DMG by 500%." }
+                    ]
+                },
+
+                galbrena: {
+                    name: "Galbrena",
+                    element: "Fusion",
+                    region: "Black Shores",
+                    weapon: "Pistols",
+                    role: "Main DPS",
+                    img: "Galbrena_Icon.webp",
+                    weaponName: "Lux & Umbra",
+                    weaponType: "Pistols",
+                    weaponNote: "Signature weapon details to be added.",
+                    mechanicName: "Kit Summary",
+                    mechanicDesc: "...",
+                    nodes: [
+                        { num: "S1", name: "Heart of Defiance Ever Ablaze", desc: "When casting Resonance Skill Ascent of Malice, each point of Afterflame grants 2% Crit. DMG to Seraphic Execution, Flamewing Verdict, Hellsent Barrage, Ravage, and Purgatory Scourge up to 80%, removed on exiting Demon Hypostasis. Those attacks are immune to interruption in Demon Hypostasis." },
+                        { num: "S2", name: "Hellbound Dive of Fire and Abyss", desc: "Burning Drive grants 350% more ATK Bonus." },
+                        { num: "S3", name: "Hunter's Blood Oath Rekindled", desc: "Resonance Liberation DMG Multiplier increased by 130%." },
+                        { num: "S4", name: "Carry Forth This Fading Spark", desc: "When Resonators in the team cast Echo Skill, all Resonators gain 20% all-Attribute DMG Bonus for 20s." },
+                        { num: "S5", name: "Though Light Fades, Torment Consumes", desc: "Resonance Skill Encroach, Ascent of Malice, and Ravage DMG Multipliers increased by 150%." },
+                        { num: "S6", name: "I Remain Who I Am, Eternal My Flame", desc: "Demon Hypostasis becomes Eternal Hypostasis retaining all effects. Seraphic Execution, Flamewing Verdict, Hellsent Barrage, and Purgatory Scourge DMG Multipliers additionally increased by 60%. Each point of Afterflame consumed grants 0.875% Fusion DMG Amplification to those skills up to 35%, removed on exit." }
+                    ]
+                }
+
+            };
+
+            function showChar(id) {
+                var c = characters[id];
+                if (!c) return;
+
+                document.getElementById("detail-img").src = c.img;
+                document.getElementById("detail-img").alt = c.name;
+                document.getElementById("detail-name").textContent = c.name;
+                document.getElementById("detail-element").textContent = c.element;
+                document.getElementById("d-region").textContent = c.region;
+                document.getElementById("d-element").textContent = c.element;
+                document.getElementById("d-weapon").textContent = c.weapon;
+                document.getElementById("d-role").textContent = c.role;
+                document.getElementById("d-weapon-name").textContent = c.weaponName;
+                document.getElementById("d-weapon-type").textContent = c.weaponType;
+                document.getElementById("d-weapon-note").textContent = c.weaponNote;
+                document.getElementById("d-mechanic-name").textContent = c.mechanicName;
+                document.getElementById("d-mechanic-desc").textContent = c.mechanicDesc;
+
+                var resModeSection = document.getElementById("resonance-mode-section");
+                if (c.resModeDesc) {
+                    document.getElementById("d-resmode-name").textContent = c.resModeName;
+                    document.getElementById("d-resmode-desc").textContent = c.resModeDesc;
+                    resModeSection.style.display = "block";
+                } else {
+                    resModeSection.style.display = "none";
+                }
+
+                var nodeList = document.getElementById("node-list");
+                nodeList.innerHTML = "";
+
+                for (var i = 0; i < c.nodes.length; i++) {
+                    var n = c.nodes[i];
+                    var nodeDiv = document.createElement("div");
+                    nodeDiv.className = "node-item";
+
+                    var nodeHeader = document.createElement("p");
+                    nodeHeader.className = "node-header";
+                    nodeHeader.textContent = n.num + " — " + n.name;
+
+                    var nodeDesc = document.createElement("p");
+                    nodeDesc.className = "node-desc";
+                    nodeDesc.textContent = n.desc;
+
+                    nodeDiv.appendChild(nodeHeader);
+                    nodeDiv.appendChild(nodeDesc);
+                    nodeList.appendChild(nodeDiv);
+                }
+
+                document.getElementById("char-list").style.display = "none";
+                document.getElementById("char-detail").style.display = "block";
+                window.scrollTo(0, 0);
+            }
+
+            function closeDetail() {
+                document.getElementById("char-detail").style.display = "none";
+                document.getElementById("char-list").style.display = "block";
+            }
+
+            const navLinks = document.querySelectorAll('nav ul li a');
+            navLinks.forEach(function(link) {
+                if (link.href === window.location.href) {
+                    link.classList.add('active');
+                }
+            });
+
+        </script>
+
+    </body>
+
+</html>

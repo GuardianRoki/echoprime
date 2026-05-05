@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>EchoPrime: Glossary</title>
+        <link rel="stylesheet" href="echoprime.css">
+    </head>
+
+    <body>
+
+        <header>
+            <h1>EchoPrime</h1>
+            <h2>Wuthering Waves Echo/Build Optimizer</h2>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="characters.html">Characters</a></li>
+                <li><a href="calculator.html">Calculator</a></li>
+                <li><a href="echodb.html">Echo DB</a></li>
+                <li><a href="guide.html">Guide</a></li>
+                <li><a href="glossary.html">Glossary</a></li>
+            </ul>
+        </nav>
+
+        <div class="wrapper">
+
+            <main>
+
+            <section>
+                <h2>Glossary</h2>
+                <p>Definitions for terms used throughout EchoPrime and Wuthering Waves. Use the search box to filter by keyword.</p>
+                <form onsubmit="return false;" class="search-wrap">
+                    <label for="gloss-search">Search terms:</label>
+                    <input type="text" id="gloss-search" class="calc-input-text" placeholder="Search terms..." oninput="filterGloss()">
+                </form>
+            </section>
+
+            <section class="region-section">
+                <h2 class="region-title">Quick Reference</h2>
+                <p>A summary of the main stat options available per echo cost tier.</p>
+                <table class="gloss-table">
+                    <thead>
+                        <tr>
+                            <th>Cost Tier</th>
+                            <th>Classification</th>
+                            <th>Available Main Stats</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cost 4</td>
+                            <td>Overlord / Calamity</td>
+                            <td>Crit. Rate, Crit. DMG, ATK%, HP%, DEF%, Healing Bonus%</td>
+                        </tr>
+                        <tr>
+                            <td>Cost 3</td>
+                            <td>Elite</td>
+                            <td>Elemental DMG Bonus, ATK%, HP%, DEF%, Energy Regen</td>
+                        </tr>
+                        <tr>
+                            <td>Cost 1</td>
+                            <td>Common</td>
+                            <td>ATK%, HP%, DEF%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="region-section">
+                <h2 class="region-title">Tune Break System</h2>
+                <div class="gloss-grid" id="grid-tunebreak">
+
+                    <div class="gloss-card">
+                        <p class="gloss-term">Tune Break</p>
+                        <p class="gloss-tag">Tune Break</p>
+                        <p class="gloss-def">A combat mechanic introduced in version 3.0. Certain Resonator attacks accumulate Off-Tune Level on eligible enemies. Once an enemy's Off-Tune Level is full, they enter the Mistune state briefly. While the enemy is in Mistune, an indicator appears when the Resonator attacks or dodges. Pressing the prompt performs a Tune Break, interrupting the enemy, clearing their Off-Tune Level, and forcing them into the Tune Disruption state. Some enemy skills or phases make them immune to Off-Tune accumulation and prevent entering Mistune, though this immunity is removed if they are already in the Mistune state when it triggers. Some enemies can only enter Mistune while casting certain skills or in a specific state.</p>
+                    </div>
+
+                    <div class="gloss-card">
+                        <p class="gloss-term">Resonance Mode</p>
+                        <p class="gloss-tag">Tune Break</p>
+                        <p class="gloss-def">Resonators without a Resonance Mode may only perform a standard Tune Break on a target in Mistune. Resonators with a Resonance Mode operate in either Tune Rupture or Tune Strain. While in Tune Rupture, the Resonator applies Tune Rupture - Shifting to targets. While in Tune Strain, they apply Tune Strain - Shifting. When a target carrying one of these effects enters Tune Disruption via Tune Break, they enter the Tune Rupture - Interfered or Tune Strain - Interfered state respectively. Resonators that respond to these states trigger additional effects when attacking targets in that state. Tune Rupture - Interfered lasts 8 seconds and Tune Strain - Interfered lasts 30 seconds.</p>
+                    </div>
+
+                    <div class="gloss-card">
+                        <p class="gloss-term">Off-Tune Buildup Rate</p>
+                        <p class="gloss-tag">Tune Break</p>
+                        <p class="gloss-def">A stat that increases the rate at which a Resonator accumulates Off-Tune Level on enemies. Higher Off-Tune Buildup Rate means enemies enter the Mistune state more frequently, enabling more Tune Breaks per fight.</p>
+                    </div>
+
+                    <div class="gloss-card">
+                        <p class="gloss-term">Tune Break Boost</p>
+                        <p class="gloss-tag">Tune Break</p>
+                        <p class="gloss-def">A stat that increases the damage and effectiveness of Tune Break and the Interfered states that follow it. Referenced in the Reel of Spliced Memories sonata set and in Lynae's kit.</p>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="region-section">
+                <h2 class="region-title">Status Effects</h2>
+                <div class="gloss-grid" id="grid-status">
+
+                    <div class="gloss-card">
+                        <p class="gloss-term">Havoc Bane</p>
+                        <p class="gloss-tag">Status Effect</p>
+                        <p class="gloss-def">A Havoc debuff that reduces the target's DEF by 2% per stack, up to 3 stacks. Higher stacks mean greater DEF reduction, amplifying all damage the target takes.</p>
+                    </div>
+
+                    <div class="gloss-card">
+                        <p class="gloss-term">Aero Erosion</p>
+                        <p class="gloss-tag">Status Effect</p>
+                        <p class="gloss-def">An Aero debuff that deals periodic Aero DMG to the target. Stacks up to 3 times by default. More stacks mean more frequent or stronger damage ticks.</p>
+                    </div>
+
+                    <div class="gloss-card">
+                        <p class="gloss-term">Spectro Frazzle</p>
+                        <p class="gloss-tag">Status Effect</p>
+                        <p class="gloss-def">A Spectro debuff that periodically deals Spectro DMG to the target. The damage scales upward as the stack count increases, rewarding sustained application.</p>
+                    </div>
+
+                    <div class="gloss-card">
+                        <p class="gloss-term">Glacio Chafe</p>
+                        <p class="gloss-tag">Status Effect</p>
+                        <p class="gloss-def">A Glacio debuff that deals Glacio DMG when inflicted. Stacks up to 10 by default. Higher stacks deal more damage and reduce the target's movement speed. At maximum stacks all stacks are consumed to freeze the target. Struggling accelerates recovery from the frozen state.</p>
+                    </div>
+
+                    <div class="gloss-card">
+                        <p class="gloss-term">Electro Flare</p>
+                        <p class="gloss-tag">Status Effect</p>
+                        <p class="gloss-def">An Electro debuff that deals periodic damage to the target. Stacks up to 10 by default. The target loses half its current stacks with each damage instance. Higher stacks deal more damage, so the goal is to keep stacks as high as possible.</p>
+                    </div>
+
+                    <div class="gloss-card">
+                        <p class="gloss-term">Fusion Burst</p>
+                        <p class="gloss-tag">Status Effect</p>
+                        <p class="gloss-def">A Fusion debuff that stacks up to 10 by default. Higher stacks deal more damage. When max stacks are reached, all stacks are consumed to trigger an explosion dealing Fusion DMG to nearby targets.</p>
+                    </div>
+
+                </div>
+            </section>
+            <div class="clear"></div>
+
+            </main>
+
+            <footer>
+                <p>EchoPrime is a fan made tool and is not affiliated with Kuro Games.</p>
+            </footer>
+
+        </div>
+
+        <script>
+
+            function filterGloss() {
+                var query = document.getElementById("gloss-search").value.toLowerCase();
+                var cards = document.querySelectorAll(".gloss-card");
+                cards.forEach(function(card) {
+                    var text = card.textContent.toLowerCase();
+                    card.style.display = text.indexOf(query) !== -1 ? "block" : "none";
+                });
+            }
+
+            var navLinks = document.querySelectorAll("nav ul li a");
+            navLinks.forEach(function(link) {
+                if (link.href === window.location.href) {
+                    link.classList.add("active");
+                }
+            });
+
+        </script>
+
+    </body>
+
+</html>

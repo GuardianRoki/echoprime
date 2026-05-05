@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>EchoPrime: Echo Build Guide</title>
+        <link rel="stylesheet" href="echoprime.css">
+    </head>
+
+    <body>
+
+        <header>
+            <h1>EchoPrime</h1>
+            <h2>Wuthering Waves Echo/Build Optimizer</h2>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="characters.html">Characters</a></li>
+                <li><a href="calculator.html">Calculator</a></li>
+                <li><a href="echodb.html">Echo DB</a></li>
+                <li><a href="guide.html">Guides</a></li>
+                <li><a href="glossary.html">Glossary</a></li>
+            </ul>
+        </nav>
+
+        <div class="wrapper">
+
+            <main>
+
+            <div id="guide-detail" class="char-detail hidden">
+
+                <div class="detail-back">
+                    <a href="#" onclick="closeGuide(); return false;">&#8592; Back to Guide Roster</a>
+                </div>
+
+                <div class="guide-detail-body">
+
+                    <div class="guide-left">
+
+                        <div class="detail-portrait-box">
+                            <img id="g-img" src="" alt="" width="140" height="140">
+                            <p id="g-name" class="detail-name"></p>
+                            <p id="g-element" class="detail-element"></p>
+                        </div>
+
+                        <div class="terminal-box">
+                            <div class="terminal-header">
+                                <p class="terminal-label">Terminal</p>
+                            </div>
+                            <div class="terminal-body">
+                                <div class="terminal-row">
+                                    <span class="terminal-key">Region</span>
+                                    <span id="g-region" class="terminal-val"></span>
+                                </div>
+                                <div class="terminal-row">
+                                    <span class="terminal-key">Weapon</span>
+                                    <span id="g-weapon" class="terminal-val"></span>
+                                </div>
+                                <div class="terminal-row">
+                                    <span class="terminal-key">Role</span>
+                                    <span id="g-role" class="terminal-val"></span>
+                                </div>
+                                <div class="terminal-row">
+                                    <span class="terminal-key">Echo Set</span>
+                                    <span id="g-set" class="terminal-val"></span>
+                                </div>
+                                <div class="terminal-row">
+                                    <span class="terminal-key">Cost Layout</span>
+                                    <span id="g-cost" class="terminal-val"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="guide-right">
+                        <h2 id="g-echo-title">Recommended Echo Setup</h2>
+                        <div id="g-echo-slots" class="guide-echo-slots"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id="guide-list">
+
+                <section>
+                    <h2>Echo Build Guides</h2>
+                    <p>Select a character below to view their recommended echo setup, ideal sonata set, and priority substats.</p>
+                </section>
+
+                <section class="region-section">
+                    <h2 class="region-title">Lahai-Roi</h2>
+                    <ul class="char-grid">
+
+                        <li class="char-card" onclick="showGuide('aemeath')">
+                            <img src="Aemeath_Icon.webp" alt="Aemeath" width="100" height="100">
+                            <p class="char-card-name">Aemeath</p>
+                            <p class="char-element">Element: Fusion</p>
+                        </li>
+
+                        <li class="char-card" onclick="showGuide('luuk')">
+                            <img src="Luuk_Icon.webp" alt="Luuk Herssen" width="100" height="100">
+                            <p class="char-card-name">Luuk Herssen</p>
+                            <p class="char-element">Element: Spectro</p>
+                        </li>
+
+                        <li class="char-card" onclick="showGuide('lynae')">
+                            <img src="Lynae_Icon.webp" alt="Lynae" width="100" height="100">
+                            <p class="char-card-name">Lynae</p>
+                            <p class="char-element">Element: Spectro</p>
+                        </li>
+
+                        <li class="char-card" onclick="showGuide('mornye')">
+                            <img src="Mornye_Icon.webp" alt="Mornye" width="100" height="100">
+                            <p class="char-card-name">Mornye</p>
+                            <p class="char-element">Element: Fusion</p>
+                        </li>
+
+                        <li class="char-card" onclick="showGuide('sigrika')">
+                            <img src="Sigrika_Icon.webp" alt="Sigrika" width="100" height="100">
+                            <p class="char-card-name">Sigrika</p>
+                            <p class="char-element">Element: Aero</p>
+                        </li>
+
+                    </ul>
+                </section>
+
+                <section class="region-section">
+                    <h2 class="region-title">Rinascita</h2>
+                    <ul class="char-grid">
+
+                        <li class="char-card" onclick="showGuide('cartethiya')">
+                            <img src="Cartethiya_Icon.webp" alt="Cartethiya" width="100" height="100">
+                            <p class="char-card-name">Cartethiya</p>
+                            <p class="char-element">Element: Aero</p>
+                        </li>
+
+                        <li class="char-card" onclick="showGuide('augusta')">
+                            <img src="Augusta_Icon.webp" alt="Augusta" width="100" height="100">
+                            <p class="char-card-name">Augusta</p>
+                            <p class="char-element">Element: Electro</p>
+                        </li>
+
+                        <li class="char-card" onclick="showGuide('iuno')">
+                            <img src="Iuno_Icon.webp" alt="Iuno" width="100" height="100">
+                            <p class="char-card-name">Iuno</p>
+                            <p class="char-element">Element: Aero</p>
+                        </li>
+
+                        <li class="char-card" onclick="showGuide('lupa')">
+                            <img src="Lupa_Icon.webp" alt="Lupa" width="100" height="100">
+                            <p class="char-card-name">Lupa</p>
+                            <p class="char-element">Element: Fusion</p>
+                        </li>
+
+                        <li class="char-card" onclick="showGuide('brant')">
+                            <img src="Brant_Icon.webp" alt="Brant" width="100" height="100">
+                            <p class="char-card-name">Brant</p>
+                            <p class="char-element">Element: Fusion</p>
+                        </li>
+
+                    </ul>
+                </section>
+
+                <section class="region-section">
+                    <h2 class="region-title">Huanglong</h2>
+                    <ul class="char-grid">
+
+                        <li class="char-card" onclick="showGuide('jinhsi')">
+                            <img src="Jinhsi_Icon.webp" alt="Jinhsi" width="100" height="100">
+                            <p class="char-card-name">Jinhsi</p>
+                            <p class="char-element">Element: Spectro</p>
+                        </li>
+
+                        <li class="char-card" onclick="showGuide('changli')">
+                            <img src="Changli_Icon.webp" alt="Changli" width="100" height="100">
+                            <p class="char-card-name">Changli</p>
+                            <p class="char-element">Element: Fusion</p>
+                        </li>
+
+                        <li class="char-card" onclick="showGuide('jiyan')">
+                            <img src="Jiyan_Icon.webp" alt="Jiyan" width="100" height="100">
+                            <p class="char-card-name">Jiyan</p>
+                            <p class="char-element">Element: Aero</p>
+                        </li>
+
+                        <li class="char-card" onclick="showGuide('xiangliYao')">
+                            <img src="XiangliYao_Icon.webp" alt="Xiangli Yao" width="100" height="100">
+                            <p class="char-card-name">Xiangli Yao</p>
+                            <p class="char-element">Element: Electro</p>
+                        </li>
+
+                        <li class="char-card" onclick="showGuide('qiuyuan')">
+                            <img src="Qiuyuan_Icon.webp" alt="Qiuyuan" width="100" height="100">
+                            <p class="char-card-name">Qiuyuan</p>
+                            <p class="char-element">Element: Aero</p>
+                        </li>
+
+                    </ul>
+                </section>
+
+                <section class="region-section">
+                    <h2 class="region-title">Black Shores</h2>
+                    <ul class="char-grid">
+
+                        <li class="char-card" onclick="showGuide('shorekeeper')">
+                            <img src="Shorekeeper_Icon.webp" alt="Shorekeeper" width="100" height="100">
+                            <p class="char-card-name">Shorekeeper</p>
+                            <p class="char-element">Element: Spectro</p>
+                        </li>
+
+                        <li class="char-card" onclick="showGuide('galbrena')">
+                            <img src="Galbrena_Icon.webp" alt="Galbrena" width="100" height="100">
+                            <p class="char-card-name">Galbrena</p>
+                            <p class="char-element">Element: Fusion</p>
+                        </li>
+
+                        <li class="char-card" onclick="showGuide('aalto')">
+                            <img src="Aalto_Icon.webp" alt="Aalto" width="100" height="100">
+                            <p class="char-card-name">Aalto</p>
+                            <p class="char-element">Element: Aero</p>
+                        </li>
+
+                        <li class="char-card" onclick="showGuide('encore')">
+                            <img src="Encore_Icon.webp" alt="Encore" width="100" height="100">
+                            <p class="char-card-name">Encore</p>
+                            <p class="char-element">Element: Fusion</p>
+                        </li>
+
+                        <li class="char-card" onclick="showGuide('camellya')">
+                            <img src="Camellya_Icon.webp" alt="Camellya" width="100" height="100">
+                            <p class="char-card-name">Camellya</p>
+                            <p class="char-element">Element: Havoc</p>
+                        </li>
+
+                    </ul>
+                </section>
+
+            </div>
+
+            <div class="clear"></div>
+
+            </main>
+
+            <footer>
+                <p>EchoPrime is a fan made tool and is not affiliated with Kuro Games.</p>
+            </footer>
+
+        </div>
+
+        <script>
+
+            var guides = {
+
+                aemeath: {
+                    name: "Aemeath",
+                    element: "Fusion",
+                    region: "Lahai-Roi",
+                    weapon: "Sword",
+                    role: "Main DPS",
+                    img: "Aemeath_Icon.webp",
+                    set: "Trailblazing Star",
+                    costLayout: "4 - 3 - 3 - 1 - 1",
+                    echoes: [
+                        { cost: 4, name: "Sigillum", main: "Crit. DMG", subs: "Crit. Rate = Crit. DMG > ATK% > Resonance Liberation DMG Bonus > Energy Regen > Flat ATK" },
+                        { cost: 3, name: null, main: "Fusion DMG Bonus", subs: "Crit. Rate = Crit. DMG > ATK% > Resonance Liberation DMG Bonus > Energy Regen > Flat ATK" },
+                        { cost: 3, name: null, main: "Fusion DMG Bonus", subs: "Crit. Rate = Crit. DMG > ATK% > Resonance Liberation DMG Bonus > Energy Regen > Flat ATK" },
+                        { cost: 1, name: null, main: "ATK%", subs: "Crit. Rate = Crit. DMG > ATK% > Resonance Liberation DMG Bonus > Energy Regen > Flat ATK" },
+                        { cost: 1, name: null, main: "ATK%", subs: "Crit. Rate = Crit. DMG > ATK% > Resonance Liberation DMG Bonus > Energy Regen > Flat ATK" }
+                    ]
+                },
+
+                luuk: {
+                    name: "Luuk Herssen",
+                    element: "Spectro",
+                    region: "Lahai-Roi",
+                    weapon: "Gauntlets",
+                    role: "Main DPS",
+                    img: "Luuk_Icon.webp",
+                    set: "Rite of Gilded Revelation",
+                    costLayout: "3 - 4 - 3 - 1 - 1",
+                    echoes: [
+                        { cost: 3, name: "Twin Nova: Nebulous Cannon", main: "Spectro DMG Bonus", subs: "Crit. Rate = Crit. DMG > ATK% > Energy Regen > Flat ATK" },
+                        { cost: 4, name: null, main: "Crit. DMG", subs: "Crit. Rate = Crit. DMG > ATK% > Energy Regen > Flat ATK" },
+                        { cost: 3, name: null, main: "Spectro DMG Bonus", subs: "Crit. Rate = Crit. DMG > ATK% > Energy Regen > Flat ATK" },
+                        { cost: 1, name: null, main: "ATK%", subs: "Crit. Rate = Crit. DMG > ATK% > Energy Regen > Flat ATK" },
+                        { cost: 1, name: null, main: "ATK%", subs: "Crit. Rate = Crit. DMG > ATK% > Energy Regen > Flat ATK" }
+                    ]
+                },
+
+                lynae: {
+                    name: "Lynae",
+                    element: "Spectro",
+                    region: "Lahai-Roi",
+                    weapon: "Gauntlets",
+                    role: "Support",
+                    img: "Lynae_Icon.webp",
+                    set: "Pact of Neonlight Leap",
+                    costLayout: "4 - 3 - 3 - 1 - 1",
+                    echoes: [
+                        { cost: 4, name: "Hyvatia", main: "ATK%", subs: "Crit. Rate = Crit. DMG > ATK% > Energy Regen > Flat ATK" },
+                        { cost: 3, name: null, main: "Spectro DMG Bonus", subs: "Crit. Rate = Crit. DMG > ATK% > Energy Regen > Flat ATK" },
+                        { cost: 3, name: null, main: "Spectro DMG Bonus", subs: "Crit. Rate = Crit. DMG > ATK% > Energy Regen > Flat ATK" },
+                        { cost: 1, name: null, main: "Energy Regen", subs: "Crit. Rate = Crit. DMG > ATK% > Energy Regen > Flat ATK" },
+                        { cost: 1, name: null, main: "Energy Regen", subs: "Crit. Rate = Crit. DMG > ATK% > Energy Regen > Flat ATK" }
+                    ]
+                },
+
+                mornye: {
+                    name: "Mornye",
+                    element: "Spectro",
+                    region: "Lahai-Roi",
+                    weapon: "Rectifier",
+                    role: "Support",
+                    img: "Mornye_Icon.webp",
+                    set: "Halo of Starry Radiance",
+                    costLayout: "4 - 3 - 3 - 1 - 1",
+                    echoes: [
+                        { cost: 4, name: "Reactor Husk", main: "DEF%", subs: "Energy Regen > DEF% > Flat DEF" },
+                        { cost: 3, name: null, main: "Energy Regen", subs: "Energy Regen > DEF% > Flat DEF" },
+                        { cost: 3, name: null, main: "Energy Regen", subs: "Energy Regen > DEF% > Flat DEF" },
+                        { cost: 1, name: null, main: "DEF%", subs: "Energy Regen > DEF% > Flat DEF" },
+                        { cost: 1, name: null, main: "DEF%", subs: "Energy Regen > DEF% > Flat DEF" }
+                    ]
+                },
+
+                sigrika: {
+                    name: "Sigrika",
+                    element: "Aero",
+                    region: "Lahai-Roi",
+                    weapon: "Broadblade",
+                    role: "Support",
+                    img: "Sigrika_Icon.webp",
+                    set: "Sound of True Name",
+                    costLayout: "4 - 3 - 3 - 1 - 1",
+                    echoes: [
+                        { cost: 4, name: "Nameless Explorer", main: "Crit. DMG", subs: "Crit. Rate = Crit. DMG > ATK% > Energy Regen > Flat ATK" },
+                        { cost: 3, name: null, main: "Aero DMG Bonus", subs: "Crit. Rate = Crit. DMG > ATK% > Energy Regen > Flat ATK" },
+                        { cost: 3, name: null, main: "Aero DMG Bonus", subs: "Crit. Rate = Crit. DMG > ATK% > Energy Regen > Flat ATK" },
+                        { cost: 1, name: null, main: "ATK%", subs: "Crit. Rate = Crit. DMG > ATK% > Energy Regen > Flat ATK" },
+                        { cost: 1, name: null, main: "ATK%", subs: "Crit. Rate = Crit. DMG > ATK% > Energy Regen > Flat ATK" }
+                    ]
+                },
+
+                cartethiya: {
+                    name: "Cartethiya",
+                    element: "Glacio",
+                    region: "Rinascita",
+                    weapon: "Sword",
+                    role: "Main DPS",
+                    img: "Cartethiya_Icon.webp",
+                    set: "Windward Pilgrimage",
+                    costLayout: "4 - 4 - 1 - 1 - 1",
+                    echoes: [
+                        { cost: 4, name: "Reminiscence: Fleurdelys", main: "Crit. DMG", subs: "Crit. Rate = Crit. DMG > HP% > Resonance Liberation DMG Bonus > Energy Regen > Flat HP" },
+                        { cost: 4, name: null, main: "HP%", subs: "Crit. Rate = Crit. DMG > HP% > Resonance Liberation DMG Bonus > Energy Regen > Flat HP" },
+                        { cost: 1, name: null, main: "HP%", subs: "Crit. Rate = Crit. DMG > HP% > Resonance Liberation DMG Bonus > Energy Regen > Flat HP" },
+                        { cost: 1, name: null, main: "HP%", subs: "Crit. Rate = Crit. DMG > HP% > Resonance Liberation DMG Bonus > Energy Regen > Flat HP" },
+                        { cost: 1, name: null, main: "HP%", subs: "Crit. Rate = Crit. DMG > HP% > Resonance Liberation DMG Bonus > Energy Regen > Flat HP" }
+                    ]
+                },
+
+                augusta: {
+                    name: "Augusta",
+                    element: "Electro",
+                    region: "Rinascita",
+                    weapon: "Pistols",
+                    role: "Main DPS",
+                    img: "Augusta_Icon.webp",
+                    set: "Crown of Valor (3pc) + any 2pc",
+                    costLayout: "4 - 3 - 3 - 1 - 1",
+                    echoes: [
+                        { cost: 4, name: "The False Sovereign", main: "Crit. DMG", subs: "Crit. Rate = Crit. DMG > ATK% > Heavy Attack DMG Bonus > Energy Regen > Flat ATK" },
+                        { cost: 3, name: null, main: "Electro DMG Bonus", subs: "Crit. Rate = Crit. DMG > ATK% > Heavy Attack DMG Bonus > Energy Regen > Flat ATK" },
+                        { cost: 3, name: null, main: "Electro DMG Bonus", subs: "Crit. Rate = Crit. DMG > ATK% > Heavy Attack DMG Bonus > Energy Regen > Flat ATK" },
+                        { cost: 1, name: null, main: "ATK%", subs: "Crit. Rate = Crit. DMG > ATK% > Heavy Attack DMG Bonus > Energy Regen > Flat ATK" },
+                        { cost: 1, name: null, main: "ATK%", subs: "Crit. Rate = Crit. DMG > ATK% > Heavy Attack DMG Bonus > Energy Regen > Flat ATK" }
+                    ]
+                },
+
+                iuno: {
+                    name: "Iuno",
+                    element: "Aero",
+                    region: "Rinascita",
+                    weapon: "Sword",
+                    role: "Support",
+                    img: "Iuno_Icon.webp",
+                    set: "Crown of Valor (3pc) + any 2pc",
+                    costLayout: "4 - 3 - 3 - 1 - 1",
+                    echoes: [
+                        { cost: 4, name: "Lady of the Sea", main: "ATK%", subs: "Crit. Rate = Crit. DMG > ATK% > Resonance Liberation DMG Bonus > Energy Regen > Flat ATK" },
+                        { cost: 3, name: null, main: "Aero DMG Bonus", subs: "Crit. Rate = Crit. DMG > ATK% > Resonance Liberation DMG Bonus > Energy Regen > Flat ATK" },
+                        { cost: 3, name: null, main: "Aero DMG Bonus", subs: "Crit. Rate = Crit. DMG > ATK% > Resonance Liberation DMG Bonus > Energy Regen > Flat ATK" },
+                        { cost: 1, name: null, main: "Energy Regen", subs: "Crit. Rate = Crit. DMG > ATK% > Resonance Liberation DMG Bonus > Energy Regen > Flat ATK" },
+                        { cost: 1, name: null, main: "Energy Regen", subs: "Crit. Rate = Crit. DMG > ATK% > Resonance Liberation DMG Bonus > Energy Regen > Flat ATK" }
+                    ]
+                },
+
+                lupa: {
+                    name: "Lupa",
+                    element: "Fusion",
+                    region: "Rinascita",
+                    weapon: "Broadblade",
+                    role: "Main DPS",
+                    img: "Lupa_Icon.webp",
+                    set: "Flaming Clawprint",
+                    costLayout: "4 - 3 - 3 - 1 - 1",
+                    echoes: [
+                        { cost: 4, name: "Lioness of Glory", main: "ATK%", subs: "Crit. Rate = Crit. DMG > ATK% > Energy Regen > Flat ATK" },
+                        { cost: 3, name: null, main: "Fusion DMG Bonus", subs: "Crit. Rate = Crit. DMG > ATK% > Energy Regen > Flat ATK" },
+                        { cost: 3, name: null, main: "Fusion DMG Bonus", subs: "Crit. Rate = Crit. DMG > ATK% > Energy Regen > Flat ATK" },
+                        { cost: 1, name: null, main: "Energy Regen", subs: "Crit. Rate = Crit. DMG > ATK% > Energy Regen > Flat ATK" },
+                        { cost: 1, name: null, main: "Energy Regen", subs: "Crit. Rate = Crit. DMG > ATK% > Energy Regen > Flat ATK" }
+                    ]
+                },
+
+                brant: {
+                    name: "Brant",
+                    element: "Fusion",
+                    region: "Rinascita",
+                    weapon: "Sword",
+                    role: "Main DPS",
+                    img: "Brant_Icon.webp",
+                    set: "Tidebreaking Courage",
+                    costLayout: "4 - 3 - 3 - 1 - 1",
+                    echoes: [
+                        { cost: 4, name: "Dragon of Dirge", main: "Crit. DMG", subs: "Energy Regen > Crit. Rate = Crit. DMG > ATK% > Basic Attack DMG Bonus > Flat ATK" },
+                        { cost: 3, name: null, main: "Energy Regen", subs: "Energy Regen > Crit. Rate = Crit. DMG > ATK% > Basic Attack DMG Bonus > Flat ATK" },
+                        { cost: 3, name: null, main: "Energy Regen", subs: "Energy Regen > Crit. Rate = Crit. DMG > ATK% > Basic Attack DMG Bonus > Flat ATK" },
+                        { cost: 1, name: null, main: "ATK%", subs: "Energy Regen > Crit. Rate = Crit. DMG > ATK% > Basic Attack DMG Bonus > Flat ATK" },
+                        { cost: 1, name: null, main: "ATK%", subs: "Energy Regen > Crit. Rate = Crit. DMG > ATK% > Basic Attack DMG Bonus > Flat ATK" }
+                    ]
+                },
+
+                jinhsi: {
+                    name: "Jinhsi",
+                    element: "Spectro",
+                    region: "Huanglong",
+                    weapon: "Broadblade",
+                    role: "Main DPS",
+                    img: "Jinhsi_Icon.webp",
+                    set: "Celestial Light",
+                    costLayout: "4 - 3 - 3 - 1 - 1",
+                    echoes: [
+                        { cost: 4, name: "Jue", main: "Crit. DMG", subs: "Crit. Rate = Crit. DMG > ATK% > Resonance Skill DMG Bonus > Energy Regen > Flat ATK" },
+                        { cost: 3, name: null, main: "Spectro DMG Bonus", subs: "Crit. Rate = Crit. DMG > ATK% > Resonance Skill DMG Bonus > Energy Regen > Flat ATK" },
+                        { cost: 3, name: null, main: "Spectro DMG Bonus", subs: "Crit. Rate = Crit. DMG > ATK% > Resonance Skill DMG Bonus > Energy Regen > Flat ATK" },
+                        { cost: 1, name: null, main: "ATK%", subs: "Crit. Rate = Crit. DMG > ATK% > Resonance Skill DMG Bonus > Energy Regen > Flat ATK" },
+                        { cost: 1, name: null, main: "ATK%", subs: "Crit. Rate = Crit. DMG > ATK% > Resonance Skill DMG Bonus > Energy Regen > Flat ATK" }
+                    ]
+                },
+
+                changli: {
+                    name: "Changli",
+                    element: "Fusion",
+                    region: "Huanglong",
+                    weapon: "Sword",
+                    role: "Main DPS",
+                    img: "Changli_Icon.webp",
+                    set: "Molten Rift",
+                    costLayout: "4 - 3 - 3 - 1 - 1",
+                    echoes: [
+                        { cost: 4, name: "Nightmare: Inferno Rider", main: "Crit. Rate", subs: "Crit. Rate = Crit. DMG > ATK% > Resonance Skill DMG Bonus > Energy Regen > Flat ATK" },
+                        { cost: 3, name: null, main: "Fusion DMG Bonus", subs: "Crit. Rate = Crit. DMG > ATK% > Resonance Skill DMG Bonus > Energy Regen > Flat ATK" },
+                        { cost: 3, name: null, main: "Fusion DMG Bonus", subs: "Crit. Rate = Crit. DMG > ATK% > Resonance Skill DMG Bonus > Energy Regen > Flat ATK" },
+                        { cost: 1, name: null, main: "ATK%", subs: "Crit. Rate = Crit. DMG > ATK% > Resonance Skill DMG Bonus > Energy Regen > Flat ATK" },
+                        { cost: 1, name: null, main: "ATK%", subs: "Crit. Rate = Crit. DMG > ATK% > Resonance Skill DMG Bonus > Energy Regen > Flat ATK" }
+                    ]
+                },
+
+                jiyan: {
+                    name: "Jiyan",
+                    element: "Aero",
+                    region: "Huanglong",
+                    weapon: "Broadblade",
+                    role: "Main DPS",
+                    img: "Jiyan_Icon.webp",
+                    set: "Sierra Gale",
+                    costLayout: "4 - 3 - 3 - 1 - 1",
+                    echoes: [
+                        { cost: 4, name: "Feilian Beringal", main: "Crit. DMG", subs: "Crit. Rate = Crit. DMG > ATK% > Basic Attack DMG Bonus > Energy Regen > Flat ATK" },
+                        { cost: 3, name: null, main: "Aero DMG Bonus", subs: "Crit. Rate = Crit. DMG > ATK% > Basic Attack DMG Bonus > Energy Regen > Flat ATK" },
+                        { cost: 3, name: null, main: "Aero DMG Bonus", subs: "Crit. Rate = Crit. DMG > ATK% > Basic Attack DMG Bonus > Energy Regen > Flat ATK" },
+                        { cost: 1, name: null, main: "ATK%", subs: "Crit. Rate = Crit. DMG > ATK% > Basic Attack DMG Bonus > Energy Regen > Flat ATK" },
+                        { cost: 1, name: null, main: "ATK%", subs: "Crit. Rate = Crit. DMG > ATK% > Basic Attack DMG Bonus > Energy Regen > Flat ATK" }
+                    ]
+                },
+
+                xiangliYao: {
+                    name: "Xiangli Yao",
+                    element: "Electro",
+                    region: "Huanglong",
+                    weapon: "Gauntlets",
+                    role: "Main DPS",
+                    img: "XiangliYao_Icon.webp",
+                    set: "Void Thunder",
+                    costLayout: "4 - 3 - 3 - 1 - 1",
+                    echoes: [
+                        { cost: 4, name: "Nightmare: Thundering Mephis", main: "Crit. DMG", subs: "Crit. Rate = Crit. DMG > ATK% > Energy Regen > Flat ATK" },
+                        { cost: 3, name: null, main: "Electro DMG Bonus", subs: "Crit. Rate = Crit. DMG > ATK% > Energy Regen > Flat ATK" },
+                        { cost: 3, name: null, main: "Electro DMG Bonus", subs: "Crit. Rate = Crit. DMG > ATK% > Energy Regen > Flat ATK" },
+                        { cost: 1, name: null, main: "ATK%", subs: "Crit. Rate = Crit. DMG > ATK% > Energy Regen > Flat ATK" },
+                        { cost: 1, name: null, main: "ATK%", subs: "Crit. Rate = Crit. DMG > ATK% > Energy Regen > Flat ATK" }
+                    ]
+                },
+
+                qiuyuan: {
+                    name: "Qiuyuan",
+                    element: "Aero",
+                    region: "Huanglong",
+                    weapon: "Rectifier",
+                    role: "Support",
+                    img: "Qiuyuan_Icon.webp",
+                    set: "Law of Harmony (3pc) + any 2pc",
+                    costLayout: "4 - 3 - 3 - 1 - 1",
+                    echoes: [
+                        { cost: 4, name: "Reminiscence: Fenrico", main: "ATK%", subs: "Crit. Rate = Crit. DMG > ATK% > Energy Regen > Flat ATK" },
+                        { cost: 3, name: null, main: "Aero DMG Bonus", subs: "Crit. Rate = Crit. DMG > ATK% > Energy Regen > Flat ATK" },
+                        { cost: 3, name: null, main: "Aero DMG Bonus", subs: "Crit. Rate = Crit. DMG > ATK% > Energy Regen > Flat ATK" },
+                        { cost: 1, name: null, main: "Energy Regen", subs: "Crit. Rate = Crit. DMG > ATK% > Energy Regen > Flat ATK" },
+                        { cost: 1, name: null, main: "Energy Regen", subs: "Crit. Rate = Crit. DMG > ATK% > Energy Regen > Flat ATK" }
+                    ]
+                },
+
+                aalto: {
+                    name: "Aalto",
+                    element: "Aero",
+                    region: "Black Shores",
+                    weapon: "Pistols",
+                    role: "Support",
+                    img: "Aalto_Icon.webp",
+                    set: "Sierra Gale",
+                    costLayout: "4 - 3 - 3 - 1 - 1",
+                    echoes: [
+                        { cost: 4, name: "Nightmare: Feilian Beringal", main: "ATK%", subs: "Crit. Rate = Crit. DMG > ATK% > Energy Regen > Flat ATK" },
+                        { cost: 3, name: null, main: "Aero DMG Bonus", subs: "Crit. Rate = Crit. DMG > ATK% > Energy Regen > Flat ATK" },
+                        { cost: 3, name: null, main: "Aero DMG Bonus", subs: "Crit. Rate = Crit. DMG > ATK% > Energy Regen > Flat ATK" },
+                        { cost: 1, name: null, main: "Energy Regen", subs: "Crit. Rate = Crit. DMG > ATK% > Energy Regen > Flat ATK" },
+                        { cost: 1, name: null, main: "Energy Regen", subs: "Crit. Rate = Crit. DMG > ATK% > Energy Regen > Flat ATK" }
+                    ]
+                },
+
+                encore: {
+                    name: "Encore",
+                    element: "Fusion",
+                    region: "Black Shores",
+                    weapon: "Rectifier",
+                    role: "Main DPS",
+                    img: "Encore_Icon.webp",
+                    set: "Molten Rift",
+                    costLayout: "4 - 3 - 3 - 1 - 1",
+                    echoes: [
+                        { cost: 4, name: "Nightmare: Inferno Rider", main: "Crit. DMG", subs: "Crit. Rate = Crit. DMG > ATK% > Energy Regen > Flat ATK" },
+                        { cost: 3, name: null, main: "Fusion DMG Bonus", subs: "Crit. Rate = Crit. DMG > ATK% > Energy Regen > Flat ATK" },
+                        { cost: 3, name: null, main: "Fusion DMG Bonus", subs: "Crit. Rate = Crit. DMG > ATK% > Energy Regen > Flat ATK" },
+                        { cost: 1, name: null, main: "ATK%", subs: "Crit. Rate = Crit. DMG > ATK% > Energy Regen > Flat ATK" },
+                        { cost: 1, name: null, main: "ATK%", subs: "Crit. Rate = Crit. DMG > ATK% > Energy Regen > Flat ATK" }
+                    ]
+                },
+
+                camellya: {
+                    name: "Camellya",
+                    element: "Havoc",
+                    region: "Black Shores",
+                    weapon: "Sword",
+                    role: "Main DPS",
+                    img: "Camellya_Icon.webp",
+                    set: "Havoc Eclipse",
+                    costLayout: "4 - 3 - 3 - 1 - 1",
+                    echoes: [
+                        { cost: 4, name: "Nightmare: Crownless", main: "Crit. DMG", subs: "Crit. Rate = Crit. DMG > ATK% > Basic Attack DMG Bonus > Energy Regen > Flat ATK" },
+                        { cost: 3, name: null, main: "Havoc DMG Bonus", subs: "Crit. Rate = Crit. DMG > ATK% > Basic Attack DMG Bonus > Energy Regen > Flat ATK" },
+                        { cost: 3, name: null, main: "Havoc DMG Bonus", subs: "Crit. Rate = Crit. DMG > ATK% > Basic Attack DMG Bonus > Energy Regen > Flat ATK" },
+                        { cost: 1, name: null, main: "ATK%", subs: "Crit. Rate = Crit. DMG > ATK% > Basic Attack DMG Bonus > Energy Regen > Flat ATK" },
+                        { cost: 1, name: null, main: "ATK%", subs: "Crit. Rate = Crit. DMG > ATK% > Basic Attack DMG Bonus > Energy Regen > Flat ATK" }
+                    ]
+                },
+
+                shorekeeper: {
+                    name: "Shorekeeper",
+                    element: "Spectro",
+                    region: "Black Shores",
+                    weapon: "Rectifier",
+                    role: "Support",
+                    img: "Shorekeeper_Icon.webp",
+                    set: "Rejuvenating Glow",
+                    costLayout: "4 - 3 - 3 - 1 - 1",
+                    echoes: [
+                        { cost: 4, name: "Fallacy of No Return", main: "HP%", subs: "Energy Regen > HP% > Flat HP" },
+                        { cost: 3, name: null, main: "Energy Regen", subs: "Energy Regen > HP% > Flat HP" },
+                        { cost: 3, name: null, main: "Energy Regen", subs: "Energy Regen > HP% > Flat HP" },
+                        { cost: 1, name: null, main: "HP%", subs: "Energy Regen > HP% > Flat HP" },
+                        { cost: 1, name: null, main: "HP%", subs: "Energy Regen > HP% > Flat HP" }
+                    ]
+                },
+
+                galbrena: {
+                    name: "Galbrena",
+                    element: "Fusion",
+                    region: "Black Shores",
+                    weapon: "Gauntlets",
+                    role: "Support",
+                    img: "Galbrena_Icon.webp",
+                    set: "Flamewing's Shadow",
+                    costLayout: "3 - 4 - 3 - 1 - 1",
+                    echoes: [
+                        { cost: 3, name: "Corrosaurus", main: "Fusion DMG Bonus", subs: "Crit. Rate = Crit. DMG > ATK% > Energy Regen > Flat ATK" },
+                        { cost: 4, name: null, main: "Crit. DMG", subs: "Crit. Rate = Crit. DMG > ATK% > Energy Regen > Flat ATK" },
+                        { cost: 3, name: null, main: "Fusion DMG Bonus", subs: "Crit. Rate = Crit. DMG > ATK% > Energy Regen > Flat ATK" },
+                        { cost: 1, name: null, main: "ATK%", subs: "Crit. Rate = Crit. DMG > ATK% > Energy Regen > Flat ATK" },
+                        { cost: 1, name: null, main: "ATK%", subs: "Crit. Rate = Crit. DMG > ATK% > Energy Regen > Flat ATK" }
+                    ]
+                }
+
+            };
+
+            function showGuide(id) {
+                var g = guides[id];
+                if (!g) return;
+
+                document.getElementById("g-img").src = g.img;
+                document.getElementById("g-img").alt = g.name;
+                document.getElementById("g-name").textContent = g.name;
+                document.getElementById("g-element").textContent = g.element;
+                document.getElementById("g-region").textContent = g.region;
+                document.getElementById("g-weapon").textContent = g.weapon;
+                document.getElementById("g-role").textContent = g.role;
+                document.getElementById("g-set").textContent = g.set;
+                document.getElementById("g-cost").textContent = g.costLayout;
+                document.getElementById("g-echo-title").textContent = g.name + ": Recommended Echo Setup";
+
+                var slotsDiv = document.getElementById("g-echo-slots");
+                slotsDiv.innerHTML = "";
+
+                for (var i = 0; i < g.echoes.length; i++) {
+                    var e = g.echoes[i];
+                    var slot = document.createElement("div");
+                    slot.className = "guide-echo-slot guide-echo-cost-" + e.cost;
+
+                    var costBadge = document.createElement("p");
+                    costBadge.className = "guide-echo-cost-label";
+                    costBadge.textContent = "Cost " + e.cost;
+                    slot.appendChild(costBadge);
+
+                    if (e.name) {
+                        var echoName = document.createElement("p");
+                        echoName.className = "guide-echo-name";
+                        echoName.textContent = e.name;
+                        slot.appendChild(echoName);
+                    }
+
+                    var mainLabel = document.createElement("p");
+                    mainLabel.className = "guide-echo-main";
+                    mainLabel.textContent = "Main: " + e.main;
+                    slot.appendChild(mainLabel);
+
+                    var subLabel = document.createElement("p");
+                    subLabel.className = "guide-echo-subs";
+                    subLabel.textContent = e.subs;
+                    slot.appendChild(subLabel);
+
+                    slotsDiv.appendChild(slot);
+                }
+
+                document.getElementById("guide-list").style.display = "none";
+                document.getElementById("guide-detail").style.display = "block";
+                window.scrollTo(0, 0);
+            }
+
+            function closeGuide() {
+                var detail = document.getElementById("guide-detail");
+                detail.style.display = "none";
+                document.getElementById("g-echo-slots").innerHTML = "";
+                document.getElementById("guide-list").style.display = "block";
+            }
+
+            const navLinks = document.querySelectorAll('nav ul li a');
+            navLinks.forEach(function(link) {
+                if (link.href === window.location.href) {
+                    link.classList.add('active');
+                }
+            });
+
+        </script>
+
+    </body>
+
+</html>

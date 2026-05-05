@@ -12,7 +12,7 @@
 
         <header>
             <h1>EchoPrime</h1>
-            <h2>Wuthering Waves Echo Build Optimizer</h2>
+            <h2>Wuthering Waves Echo/Build Optimizer</h2>
         </header>
 
         <nav>
@@ -21,19 +21,21 @@
                 <li><a href="characters.html">Characters</a></li>
                 <li><a href="calculator.html">Calculator</a></li>
                 <li><a href="echodb.html">Echo DB</a></li>
+                <li><a href="guide.html">Guide</a></li>
+                <li><a href="glossary.html">Glossary</a></li>
             </ul>
         </nav>
 
         <div class="wrapper">
 
-            <main>
+            <main class="index-main">
 
                 <section>
                     <h2>What is EchoPrime?</h2>
-                    <p>EchoPrime is a build optimization tool for Wuthering Waves players. The game gives you echoes to equip on your characters, 
-                        but figuring out if your echo stats are actually good is not always straightforward. EchoPrime takes care of that. 
-                        You input your echo stats, and the site grades your build from S down to F based on how well your substats match what your 
-                        character actually needs.</p>
+                    <p>EchoPrime is a fan-made build optimization tool for players of Kuro Games' Wuthering Waves. 
+                        Farmable equipment called echoes are slotted onto your characters, but figuring out if your echo stats are actually good 
+                        is not always straightforward. EchoPrime takes care of that. You input your echoes and their stats, and the site 
+                        grades your build from S+ down to F based on how well your substats match what your character actually needs.</p>
 
                     <p>Whether you are just getting into endgame or trying to push your best characters to their limit, this site is built 
                         to help you spend less time guessing and more time farming the right things.</p>
@@ -60,13 +62,13 @@
                     <li><a href="echodb.html">Echo Database</a></li>
                 </ul>
 
-                <h3>Featured Resonators</h3>
+                <h3>Featured Meta Resonators</h3>
                 <ul>
                     <li>Aemeath</li>
-                    <li>Cartethiya</li>
-                    <li>Augusta</li>
-                    <li>Zani</li>
-                    <li>Carlotta</li>
+                    <li>Sigrika</li>
+                    <li>Shorekeeper</li>
+                    <li>Lynae</li>
+                    <li>Mornye</li>
                 </ul>
             </aside>
 
@@ -80,41 +82,41 @@
 
                     <li class="char-card">
                         <a href="characters.html#Sigrika">
-                            <img src="img/sigrika.png" alt="Sigrika" width="80" height="80">
+                            <img src="Sigrika_Icon.webp" alt="Sigrika" width="80" height="80">
                             <p>Sigrika</p>
-                            <p class="char-element">Aero</p>
+                            <p class="char-element">Element: Aero</p>
                         </a>
                     </li>
 
                     <li class="char-card">
-                        <a href="characters.html#LuukHersen">
-                            <img src="img/luuk_hersen.png" alt="Luuk Hersen" width="80" height="80">
-                            <p>Luuk Hersen</p>
-                            <p class="char-element">Spectro</p>
+                        <a href="characters.html#LuukHerssen">
+                            <img src="Luuk_Icon.webp" alt="Luuk Herssen" width="80" height="80">
+                            <p>Luuk Herssen</p>
+                            <p class="char-element">Element: Spectro</p>
                         </a>
                     </li>
 
                     <li class="char-card">
                         <a href="characters.html#Aemeath">
-                            <img src="img/aemeath.png" alt="Aemeath" width="80" height="80">
+                            <img src="Aemeath_Icon.webp" alt="Aemeath" width="80" height="80">
                             <p>Aemeath</p>
-                            <p class="char-element">Fusion</p>
+                            <p class="char-element">Element: Fusion</p>
                         </a>
                     </li>
 
                     <li class="char-card">
                         <a href="characters.html#Mornye">
-                            <img src="img/mornye.png" alt="Mornye" width="80" height="80">
+                            <img src="Mornye_Icon.webp" alt="Mornye" width="80" height="80">
                             <p>Mornye</p>
-                            <p class="char-element">Fusion</p>
+                            <p class="char-element">Element: Fusion</p>
                         </a>
                     </li>
 
                     <li class="char-card">
                         <a href="characters.html#Lynae">
-                            <img src="img/lynae.png" alt="Lynae" width="80" height="80">
+                            <img src="Lynae_Icon.webp" alt="Lynae" width="80" height="80">
                             <p>Lynae</p>
-                            <p class="char-element">Spectro</p>
+                            <p class="char-element">Element: Spectro</p>
                         </a>
                     </li>
 
@@ -142,6 +144,15 @@
             <footer>
                 <p>EchoPrime is a fan made tool and is not affiliated with Kuro Games.</p>
             </footer>
+
+            <script>
+            const navLinks = document.querySelectorAll('nav ul li a');
+            navLinks.forEach(function(link) {
+                if (link.href === window.location.href) {
+                    link.classList.add('active');
+                }
+            });
+        </script>
 
         </div>
 
